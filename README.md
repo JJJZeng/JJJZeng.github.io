@@ -2,7 +2,7 @@
 
 Personal profile site for Jin Zeng — Manager, Data Science & AI Consulting.
 
-**Live:** <https://jjjzeng.github.io/>
+**Live:** <https://jjjzeng.github.io>
 
 Static HTML, CSS and vanilla JavaScript. No build step, no dependencies, no
 framework, no trackers, no third-party requests. GitHub Pages serves the repo
@@ -151,6 +151,7 @@ carries GPS in its EXIF just like any other photo.
    ```json
    "portrait": "IMG_1234.HEIC",
    ```
+
 3. Rebuild:
 
    ```bash

@@ -17,7 +17,7 @@
    to list any string that still needs an entry here. */
 window.JZ_I18N = {
   meta: {
-    zh: { code: "zh-Hans", short: "中文", name: "简体中文", title: "Jin Zeng — 数据科学与人工智能咨询经理" },
+    zh: { code: "zh-Hans", short: "中文", name: "简体中文", title: "Jin Zeng (曾进) — 数据科学与人工智能咨询经理" },
     fr: { code: "fr", short: "FR", name: "Français", title: "Jin Zeng — Manager, Data Science & Conseil en IA" },
   },
 
