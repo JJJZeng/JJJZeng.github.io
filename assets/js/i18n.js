@@ -22,6 +22,7 @@ window.JZ_I18N = {
   },
 
   zh: {
+    "Jin Zeng": "曾进",
     "Light mode": "浅色模式",
     "Switch to light mode": "切换到浅色模式",
     "Switch to dark mode": "切换到深色模式",
