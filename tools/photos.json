@@ -1,0 +1,194 @@
+{
+  "_comment": [
+    "Source of truth for the photo gallery and the hero portrait.",
+    "Add a photo: drop the file into the source folder (default: ../photo, i.e. OUTSIDE this repo),",
+    "add an entry below, then run:  python3 tools/process_photos.py",
+    "The script resizes, strips ALL metadata (including GPS), writes WebP + JPEG into",
+    "assets/img/gallery/, and rewrites the gallery and portrait blocks inside index.html.",
+    "Originals are never copied into the repo.",
+    "Captions and alt text are translated in assets/js/i18n.js — add new strings there too."
+  ],
+  "sourceDir": "../photo",
+  "portrait": {
+    "src": "IMG_1650.heic",
+    "_note": "Wide scene, so it needs framing. focusX/focusY place the centre of the crop as a fraction of the image; zoom tightens in from the largest possible square. Lower zoom = wider = more sky.",
+    "focusX": 0.565,
+    "focusY": 0.755,
+    "zoom": 2.7
+  },
+  "collections": [
+    {
+      "id": "bakery",
+      "label": "Bakery",
+      "photos": [
+        {
+          "src": "IMG_0435.HEIC",
+          "caption": "Matcha cream cake",
+          "alt": "A matcha cream cake photographed from above, ringed with piped rosettes and topped with halved strawberries and blueberries arranged in a radiating pattern"
+        },
+        {
+          "src": "IMG_6561.JPG",
+          "caption": "Birthday cake, with a face",
+          "alt": "A small matcha layer cake dusted with green tea powder, decorated with a piped smiling face and a border of blueberries and pale green rosettes"
+        },
+        {
+          "src": "DSC01881.JPG",
+          "caption": "Someone's birthday",
+          "alt": "A matcha birthday cake ringed with raspberries and piped cream, with Happy Birthday written across a white disc on top"
+        },
+        {
+          "src": "b05223a5b784cf33e69a2a8026c59e_livephoto.HEIC",
+          "caption": "Proofed and ready",
+          "alt": "Two loaf pans of proofed milk bread dough, one plain and one tinted pandan green, beside a bag of bread flour"
+        },
+        {
+          "src": "59cd1337d61ab162ea220c900ffcff.JPG",
+          "caption": "Milk bread, last ten minutes",
+          "alt": "Two loaf pans of milk bread browning inside an oven, one plain and one tinted pale green with pandan"
+        },
+        {
+          "src": "IMG_4112.JPG",
+          "caption": "Oat-topped loaf",
+          "alt": "A three-lobed milk bread loaf resting in its pan, glazed and scattered with rolled oats, next to a bowl of leftover egg wash"
+        },
+        {
+          "src": "IMG_4679.JPG",
+          "caption": "Black sesame swirl, crumb shot",
+          "alt": "A loaf of black sesame swirl milk bread torn open by hand to show the marbled, feathery crumb inside"
+        },
+        {
+          "src": "IMG_9281.HEIC",
+          "caption": "Egg tarts and blueberry tarts",
+          "alt": "Egg tarts and blueberry tarts in foil cases cooling on a wire rack, with a mint green electric kettle behind them"
+        },
+        {
+          "src": "IMG_9610.HEIC",
+          "caption": "Matcha and double chocolate thumbprints",
+          "alt": "Matcha green and dark chocolate thumbprint cookies pressed with chunks of chocolate, cooling on parchment paper"
+        },
+        {
+          "src": "IMG_2858.HEIC",
+          "caption": "Chocolate chunk, in the oven",
+          "alt": "Chocolate chunk cookies spread across a foil-lined tray inside a hot oven"
+        },
+        {
+          "src": "IMG_8865.HEIC",
+          "caption": "Coconut chocolate chip cookies",
+          "alt": "Coconut chocolate chip cookies studded with chocolate buttons, cooling on a wire rack"
+        },
+        {
+          "src": "IMG_6576.JPG",
+          "caption": "Tanghulu",
+          "alt": "Wooden skewers of candied fruit — green grapes, mandarin segments, cherries and blueberries — glossy with a hardened sugar shell"
+        },
+        {
+          "src": "IMG_9812.HEIC",
+          "caption": "Pumpkin biscuits for the dog",
+          "alt": "Bone-shaped pumpkin dog biscuits topped with black sesame seeds, cooling on a wire rack beside a batch of cookies"
+        }
+      ]
+    },
+    {
+      "id": "court",
+      "label": "Court time",
+      "photos": [
+        {
+          "src": "IMG_7759.HEIC",
+          "caption": "Serve, autumn league",
+          "alt": "A tennis player mid-serve on an outdoor blue hard court, racket raised and ball in the air against a clear sky, with autumn trees behind the fence"
+        },
+        {
+          "src": "IMG_7911.JPG",
+          "caption": "New strings",
+          "alt": "A lavender tennis racket held up against a blue hard court, balls scattered across the far side and cloud overhead"
+        },
+        {
+          "src": "IMG_1183.JPG",
+          "caption": "Sunset over centre court",
+          "alt": "An ATP Tour match on a stadium court at sunset, pink clouds above a full crowd, a player standing at the baseline"
+        },
+        {
+          "src": "IMG_0560.JPG",
+          "caption": "Afternoon session",
+          "alt": "A tennis player following through on a shot on a stadium court under a blue sky with scattered cloud, spectators in the stands behind"
+        },
+        {
+          "src": "IMG_0688.JPG",
+          "caption": "Waiting on serve",
+          "alt": "A player crouched low to receive serve on a stadium court, the stands packed behind and a tournament clock at the baseline"
+        },
+        {
+          "src": "IMG_0690.JPG",
+          "caption": "Running it down",
+          "alt": "A player sprinting along the baseline of a stadium court to reach a ball, sponsor boards and a full crowd behind"
+        },
+        {
+          "src": "IMG_0728.JPG",
+          "caption": "Night serve",
+          "alt": "A tennis player tossing the ball to serve on a floodlit stadium court at night, the air hazy with light"
+        },
+        {
+          "src": "IMG_0732.JPG",
+          "caption": "Between points",
+          "alt": "A player in a yellow shirt walking the baseline between points on a stadium court, the match clock reading one thirty-five"
+        },
+        {
+          "src": "IMG_1196.JPG",
+          "caption": "From the stands",
+          "alt": "A night tennis match seen from the spectator stands, the scoreboard lit up beyond the court and a player about to hit a forehand"
+        },
+        {
+          "src": "IMG_1222.JPG",
+          "caption": "Tournament grounds",
+          "alt": "A person sitting in front of oversized white letters spelling a tournament hashtag next to a giant tennis ball sculpture on a sunny day"
+        },
+        {
+          "src": "IMG_0741.JPG",
+          "caption": "Signed, after the last match",
+          "alt": "A hand holding up a signed tennis ball in front of an empty floodlit stadium late at night"
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "label": "Travel",
+      "photos": [
+        {
+          "src": "16491.JPG",
+          "caption": "Peggy's Cove, Nova Scotia",
+          "alt": "A white lighthouse standing on wave-smoothed granite at Peggy's Cove, Nova Scotia, under a wide sky of scattered cloud with tide pools in the foreground"
+        },
+        {
+          "src": "IMG_9152.JPG",
+          "caption": "Brooklyn Bridge, looking up",
+          "alt": "The stone tower and fanned steel cables of the Brooklyn Bridge photographed from the walkway against a clear blue sky"
+        },
+        {
+          "src": "IMG_3843.JPG",
+          "caption": "Hong Kong, blue hour",
+          "alt": "Hong Kong harbour at dusk seen from above, the convention centre's curved white roof in the foreground and the Kowloon skyline lit across the water"
+        },
+        {
+          "src": "IMG_1650.heic",
+          "caption": "Florida, golden hour",
+          "alt": "A person in Mickey Mouse ears walking down a theme park boulevard at sunset, palm trees and a tall art deco tower catching the last light"
+        },
+        {
+          "src": "IMG_1922.JPG",
+          "caption": "Algonquin Provincial Park, Peak colour",
+          "alt": "A boardwalk trail winding through Algonquin Provincial Park at peak autumn colour, gold and orange leaves arching overhead"
+        },
+        {
+          "src": "IMG_8878.JPG",
+          "caption": "The Starry Night, in person",
+          "alt": "Van Gogh's painting The Starry Night hanging in a gallery, its swirling blue night sky and dark cypress tree set in a black frame"
+        },
+        {
+          "src": "IMG_6166.JPG",
+          "caption": "McDonald's astronaut, Houston",
+          "alt": "A life-size astronaut statue holding up a carton of fries outside a McDonald's near Houston, under a heavy grey sky"
+        }
+      ]
+    }
+  ]
+}

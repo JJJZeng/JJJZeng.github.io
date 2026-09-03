@@ -1,0 +1,70 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# NEVER COMMIT: the résumé.
+# It carries a phone number, an email address and a home address. The site is
+# built to stand on its own without it — LinkedIn is the contact channel.
+# The file normally lives one level up, outside this repo. These rules are the
+# second line of defence in case a copy ever lands inside it.
+# ─────────────────────────────────────────────────────────────────────────────
+*.pdf
+*.doc
+*.docx
+*Resume*
+*resume*
+*CV*
+*Cover*Letter*
+
+# NEVER COMMIT: original photos.
+# The originals carry EXIF GPS coordinates from where they were taken, several
+# of them at home. Only the processed, metadata-stripped copies in
+# assets/img/gallery/ belong in git. Rebuild them with:
+#     python3 tools/process_photos.py
+photo/
+photos/
+originals/
+*.HEIC
+*.heic
+*.HEIF
+*.heif
+*.DNG
+*.dng
+*.CR2
+*.NEF
+*.ARW
+*.MOV
+*.mov
+*.MP4
+*.mp4
+*.AAE
+
+# Keep the built gallery: it is intentionally committed so GitHub Pages can
+# serve the site with no build step. Re-allow anything the rules above caught.
+!assets/img/**/*.jpg
+!assets/img/**/*.webp
+!assets/img/**/*.png
+!assets/img/**/*.svg
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Editors & tooling
+.vscode/
+.idea/
+*.swp
+*~
+.claude/
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+
+# Scratch
+_preview_tmp/
+_rev/
+tmp/
+*.log

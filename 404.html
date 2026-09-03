@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Jin Zeng</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css">
+<style>
+  .oops { min-height: 78vh; display: grid; place-content: center; text-align: left; }
+  .oops h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 6vw, 3.6rem);
+             letter-spacing: -.03em; margin-bottom: .8rem; }
+  .oops p { max-width: 40ch; color: var(--slate); margin-bottom: 1.8rem; }
+  .oops code { font: 500 .9em var(--font-mono); color: var(--ink); }
+</style>
+</head>
+<body>
+<main class="wrap oops">
+  <p class="eyebrow">Error 404</p>
+  <h1>That page isn't here</h1>
+  <p>Nothing lives at <code id="path"></code>. The profile is a single page — everything is on the front door.</p>
+  <p><a class="btn btn--primary" href="/">Back to the profile</a></p>
+</main>
+<script>
+  document.getElementById('path').textContent = location.pathname;
+  (function () {
+    try {
+      var s = localStorage.getItem('jz-theme');
+      var d = s ? s === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', d ? 'dark' : 'light');
+    } catch (e) {}
+  }());
+</script>
+</body>
+</html>

@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jin Zeng — Manager, Data Science &amp; AI Consulting</title>
+  <meta name="description"
+    content="Jin Zeng leads data science and generative AI delivery at IBM in Toronto: seventeen enterprise engagements across government, banking, healthcare, energy and telecommunications, from forecasting models to production LLM agents.">
+  <link rel="canonical" href="https://jjjzeng.github.io/">
+  <meta name="theme-color" content="#0B4FD1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#08131F" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://jjjzeng.github.io/">
+  <meta property="og:title" content="Jin Zeng — Manager, Data Science &amp; AI Consulting">
+  <meta property="og:description"
+    content="Seventeen enterprise engagements across government, banking, healthcare, energy and telecommunications — from forecasting models to production LLM agents.">
+  <meta property="og:image" content="https://jjjzeng.github.io/assets/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jin Zeng, Manager, Data Science and AI Consulting, Toronto.">
+  <meta property="profile:first_name" content="Jin">
+  <meta property="profile:last_name" content="Zeng">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Set the theme before first paint so a dark-mode visitor never sees a white flash. -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('jz-theme');
+        var dark = saved ? saved === 'dark'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      } catch (e) { }
+    }());
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jin Zeng",
+  "jobTitle": "Manager, Data Science & AI Consulting",
+  "url": "https://jjjzeng.github.io/",
+  "address": { "@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "ON", "addressCountry": "CA" },
+  "knowsLanguage": ["zh", "en", "es"],
+  "sameAs": [
+    "https://www.linkedin.com/in/jin-zeng-642945151/",
+    "https://github.com/JJJZeng"
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "University of Toronto" },
+    { "@type": "CollegeOrUniversity", "name": "McMaster University" },
+    { "@type": "CollegeOrUniversity", "name": "Wuhan University of Technology" },
+    { "@type": "CollegeOrUniversity", "name": "Wuhan University" }
+  ],
+  "knowsAbout": ["Generative AI", "Large language models", "Retrieval-augmented generation", "Agentic AI", "Machine learning", "Forecasting", "Natural language processing", "Feature engineering", "Data engineering"]
+}
+</script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="mark" href="#top">
+        <span class="mark__glyph" aria-hidden="true">JZ</span>
+        <span class="mark__text">Jin&nbsp;Zeng</span>
+      </a>
+
+      <button class="navtoggle" type="button" aria-expanded="false" aria-controls="sitenav">
+        <span class="navtoggle__bars" aria-hidden="true"></span>
+        <span class="navtoggle__label">Menu</span>
+      </button>
+
+      <nav class="sitenav" id="sitenav" aria-label="Sections">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#engagements">Engagements</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#beyond">Beyond work</a></li>
+          <li><a href="#connect">Connect</a></li>
+        </ul>
+      </nav>
+
+      <!-- data-no-i18n: these labels name languages, so each stays in its own
+           language instead of being translated. -->
+      <div class="langtoggle" role="group" aria-label="Language" data-lang-toggle data-no-i18n>
+        <button type="button" data-lang="en" lang="en" aria-pressed="true" aria-label="English">EN</button>
+        <button type="button" data-lang="zh" lang="zh-Hans" aria-pressed="false" aria-label="简体中文">中文</button>
+        <button type="button" data-lang="fr" lang="fr" aria-pressed="false" aria-label="Français">FR</button>
+      </div>
+
+      <button class="themetoggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="themetoggle__icon" aria-hidden="true"></span>
+        <span class="themetoggle__label">Dark mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ───────────────────────────── hero ───────────────────────────── -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="wrap hero__grid">
+
+        <div class="hero__id">
+          <p class="eyebrow">Toronto, Canada</p>
+
+          <div class="hero__nameblock">
+            <!-- portrait:start -->
+            <span class="portrait">
+              <span class="portrait__initials" aria-hidden="true">JZ</span>
+              <picture>
+                <source type="image/webp" srcset="assets/img/portrait-160.webp 160w, assets/img/portrait-320.webp 320w"
+                  sizes="5.2rem">
+                <img src="assets/img/portrait-320.jpg"
+                  srcset="assets/img/portrait-160.jpg 160w, assets/img/portrait-320.jpg 320w" sizes="5.2rem" width="320"
+                  height="320" alt="Jin Zeng" decoding="async">
+              </picture>
+            </span>
+            <!-- portrait:end -->
+            <h1 id="hero-name">Jin Zeng</h1>
+          </div>
+
+          <p class="hero__tag">An ordinary data scientist.</p>
+
+          <p class="hero__pitch">Nothing special going on here. I forecast things, and lately I talk large language
+            models into behaving themselves inside other people's security perimeters. Seventeen engagements,
+            eleven industries, an enormous amount of messy data.</p>
+
+          <p class="hero__role">Manager, Data&nbsp;Science &amp; AI&nbsp;Consulting <span class="hero__at">at IBM</span>
+          </p>
+
+          <p class="hero__cta">
+            <a class="btn btn--primary" href="https://www.linkedin.com/in/jin-zeng-642945151/" rel="noopener">
+              Connect on LinkedIn
+              <svg aria-hidden="true" viewBox="0 0 20 20" width="14" height="14">
+                <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a class="btn btn--ghost" href="#work">See the work</a>
+          </p>
+
+        </div>
+
+        <!-- signature: the engagement chart -->
+        <figure class="chart" data-chart>
+          <figcaption class="chart__cap">
+            <span class="eyebrow">Engagement history</span>
+            <span class="chart__sub">Seventeen assignments, February 2019 to today. Each bar is a project — select one
+              to read it.</span>
+          </figcaption>
+
+          <div class="chart__scroll" role="region" tabindex="0"
+            aria-label="Engagement timeline, 2019 to 2026, scrollable horizontally">
+            <div class="chart__plot">
+              <div class="chart__axis" aria-hidden="true">
+                <span style="--x:0%">2019</span><span style="--x:12.5%">2020</span><span style="--x:25%">2021</span>
+                <span style="--x:37.5%">2022</span><span style="--x:50%">2023</span><span style="--x:62.5%">2024</span>
+                <span style="--x:75%">2025</span><span style="--x:87.5%">2026</span>
+              </div>
+
+              <ol class="chart__rows">
+                <li><a class="bar bar--ml" style="--x:2.083%;--w:42.708%" href="#p-equities" data-i="1"><span
+                      class="vh">Revenue forecasting for US and European equities, investment management, March 2019 to
+                      July 2022. Machine learning.</span></a></li>
+                <li><a class="bar bar--ml" style="--x:9.375%;--w:2.083%" href="#p-weather" data-i="2"><span
+                      class="vh">Weather impact on macroeconomic indicators, banking, October to November 2019. Machine
+                      learning.</span></a></li>
+                <li><a class="bar bar--ml" style="--x:11.458%;--w:2.083%" href="#p-alpha" data-i="3"><span
+                      class="vh">News-driven alpha forecasting dashboard, banking, December 2019 to January 2020.
+                      Machine learning.</span></a></li>
+                <li><a class="bar bar--ml" style="--x:27.083%;--w:2.083%" href="#p-insurance" data-i="4"><span
+                      class="vh">Insurance data quality validation, pension and insurance, March to April 2021. Data
+                      engineering.</span></a></li>
+                <li><a class="bar bar--ml" style="--x:39.583%;--w:6.25%" href="#p-parts" data-i="5"><span
+                      class="vh">Parts demand forecasting enhancement, aerospace manufacturing, March to August 2022.
+                      Machine learning.</span></a></li>
+                <li><a class="bar bar--ml" style="--x:53.125%;--w:2.083%" href="#p-segments" data-i="6"><span
+                      class="vh">Customer classification models, postal and logistics, April to May 2023. Machine
+                      learning.</span></a></li>
+                <li><a class="bar bar--genai" style="--x:56.25%;--w:6.25%" href="#p-rfp" data-i="7"><span
+                      class="vh">Generative AI proposal advisor, professional services, July to December 2023.
+                      Generative AI.</span></a></li>
+                <li><a class="bar bar--both" style="--x:63.542%;--w:4.167%" href="#p-revenue-id" data-i="8"><span
+                      class="vh">Revenue identification model with generative AI reporting, postal and logistics,
+                      February to May 2024. Machine learning and generative AI.</span></a></li>
+                <li><a class="bar bar--genai" style="--x:66.667%;--w:2.083%" href="#p-rag-fix" data-i="9"><span
+                      class="vh">Enterprise retrieval platform remediation, public sector, May to June 2024. Generative
+                      AI.</span></a></li>
+                <li><a class="bar bar--genai" style="--x:68.75%;--w:2.083%" href="#p-multimodel" data-i="10"><span
+                      class="vh">Secure multi-model conversational AI platform, public sector, July to August 2024.
+                      Generative AI.</span></a></li>
+                <li><a class="bar bar--genai" style="--x:69.792%;--w:5.208%" href="#p-accelerators" data-i="11"><span
+                      class="vh">Generative AI assets and accelerators programme, public sector, August to December
+                      2024. Generative AI.</span></a></li>
+                <li><a class="bar bar--genai" style="--x:75%;--w:6.25%" href="#p-concierge" data-i="12"><span
+                      class="vh">Bilingual HR and pay concierge assistant, public sector, January to June 2025.
+                      Generative AI.</span></a></li>
+                <li><a class="bar bar--genai" style="--x:80.208%;--w:7.292%" href="#p-voice" data-i="13"><span
+                      class="vh">Generative AI voice assistant, healthcare, June to December 2025. Generative
+                      AI.</span></a></li>
+                <li><a class="bar bar--genai" style="--x:87.5%;--w:3.125%" href="#p-erp" data-i="14"><span
+                      class="vh">ERP configuration agents, telecommunications, January to March 2026. Generative
+                      AI.</span></a></li>
+                <li><a class="bar bar--both" style="--x:89.583%;--w:3.125%" href="#p-nominations" data-i="15"><span
+                      class="vh">AI-assisted volume nomination workflow, energy, March to May 2026. Machine learning and
+                      generative AI.</span></a></li>
+                <li><a class="bar bar--genai" style="--x:91.667%;--w:3.125%" href="#p-risk" data-i="16"><span
+                      class="vh">Governance risk assessment agent, public sector, May to July 2026. Generative
+                      AI.</span></a></li>
+                <li><a class="bar bar--genai bar--live" style="--x:92.708%;--w:4.167%" href="#p-itp" data-i="17"><span
+                      class="vh">Agentic work package drafting assistant, construction and infrastructure, June 2026 to
+                      present. Generative AI. Current engagement.</span></a></li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="chart__foot">
+            <ul class="legend">
+              <li><span class="key key--genai" aria-hidden="true"></span>Generative&nbsp;AI &amp; agentic</li>
+              <li><span class="key key--ml" aria-hidden="true"></span>ML &amp; data engineering</li>
+              <li><span class="key key--both" aria-hidden="true"></span>Both</li>
+            </ul>
+
+            <p class="chart__now">
+              <span class="chart__nowlabel">Now</span>
+              <a href="#p-itp">Agentic assistant for inspection-plan drafting</a>
+              <span class="chart__nowwhere">Construction &amp; infrastructure</span>
+            </p>
+          </div>
+        </figure>
+
+        <dl class="tally">
+          <div>
+            <dt>Years in practice</dt>
+            <dd>7<span aria-hidden="true">+</span><span class="vh"> or more</span></dd>
+          </div>
+          <div>
+            <dt>Engagements led</dt>
+            <dd>17</dd>
+          </div>
+          <div>
+            <dt>Industries served</dt>
+            <dd>11</dd>
+          </div>
+          <div>
+            <dt>Degrees earned</dt>
+            <dd>4</dd>
+          </div>
+        </dl>
+
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── work / roles ───────────────────────────── -->
+    <section class="band" id="work" aria-labelledby="work-h">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">Where I've worked</p>
+        <h2 id="work-h">Seven years of turning messy enterprise data into decisions</h2>
+
+        <p class="lede">Advanced degrees in statistics, economics and computer science, then a consulting career spent
+          alternating between two things I like equally: squeezing accuracy out of a forecasting model, and getting a
+          language model to behave inside somebody's security perimeter. Lately more of the second. Client names are
+          left out here on purpose — industries and outcomes tell you what you need.</p>
+
+        <ol class="roles">
+          <li class="row">
+            <div class="row__meta">
+              <p class="row__dates">2026.01 — <em>present</em></p>
+              <p class="row__where">IBM · Toronto</p>
+            </div>
+            <div class="row__body">
+              <h3>Manager, Data Science &amp; Consulting</h3>
+              <p>Own delivery and technical direction across generative AI and analytics engagements. Set solution
+                architecture, run the sprint cadence, and carry the story into the room where budget decisions get made.
+                Mentor data scientists and lead the knowledge-sharing that stops each team relearning the same lesson.
+              </p>
+            </div>
+          </li>
+          <li class="row">
+            <div class="row__meta">
+              <p class="row__dates">2019.02 — 2025.12</p>
+              <p class="row__where">IBM · Toronto</p>
+            </div>
+            <div class="row__body">
+              <h3>Data Scientist → Senior Data Scientist</h3>
+              <p>Delivered analytics and AI for financial institutions in Canada and the US, plus government,
+                healthcare,
+                utilities, automotive, luxury retail, aerospace and postal clients. Work spanned fraud detection, supply
+                optimisation, revenue forecasting, pricing strategy, news-impact modelling on equities, and marketing
+                performance measurement — then, from 2023 onward, secure enterprise chatbots and agentic systems.</p>
+              <p>Built the unglamorous parts too: scalable pipelines feeding the models, a feature-selection method,
+                an NLP approach, a web scraper, and Azure and AWS integrations pulling internal and external sources
+                together.</p>
+            </div>
+          </li>
+          <li class="row">
+            <div class="row__meta">
+              <p class="row__dates">2018.06 — 2019.01</p>
+              <p class="row__where">Citi · Mississauga</p>
+            </div>
+            <div class="row__body">
+              <h3>ICG Technology Analyst, Credit Technology</h3>
+              <p>Supported New York credit trading desks across pricing, risk, electronic trading and trade capture —
+                vanilla bonds through exotic options. Translated between traders and engineers, monitored the daily job
+                chain, and cleared the ticket queue around script deployments.</p>
+            </div>
+          </li>
+          <li class="row">
+            <div class="row__meta">
+              <p class="row__dates">2017.05 — 2017.12</p>
+              <p class="row__where">McMaster University</p>
+            </div>
+            <div class="row__body">
+              <h3>Thesis research — Monte Carlo option pricing</h3>
+              <p>Priced Asian and basket options by simulation. Solved the constant-volatility PDE for the Asian call to
+                establish a benchmark, then compared naïve Monte Carlo, antithetic variates and control variates on
+                absolute error, mean squared error and compute time. Graded 11.83&nbsp;/&nbsp;12.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── engagements / projects ───────────────────────────── -->
+    <section class="band band--tint" id="engagements" aria-labelledby="eng-h">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">Selected engagements</p>
+        <h2 id="eng-h">Seventeen projects, two families of problem</h2>
+        <p class="lede">Every client here is anonymised to an industry. Named platforms are my employer's own products
+          or public cloud services, never a client's system.</p>
+
+        <div class="filters" role="group" aria-label="Filter engagements by problem family">
+          <button type="button" class="chip" data-family="all" aria-pressed="true">All <span
+              class="chip__n">17</span></button>
+          <button type="button" class="chip" data-family="genai" aria-pressed="false">Generative AI &amp; agentic <span
+              class="chip__n">11</span></button>
+          <button type="button" class="chip" data-family="ml" aria-pressed="false">ML &amp; data engineering <span
+              class="chip__n">8</span></button>
+        </div>
+        <p class="filters__status" role="status" data-filter-status>Showing all 17 engagements.</p>
+
+        <ol class="projects" data-projects>
+
+          <li class="row proj" id="p-itp" data-family="genai">
+            <div class="row__meta">
+              <p class="row__dates">2026.06 — <em>present</em></p>
+              <p class="row__where">Construction &amp; infrastructure · Canada</p>
+              <p class="row__tag row__tag--genai">Generative AI</p>
+            </div>
+            <div class="row__body">
+              <h3>Agentic assistant for inspection-plan drafting</h3>
+              <p class="row__seat">Lead Data Scientist</p>
+              <p>A generative AI assistant that drafts inspection and test plans from a repository of historical
+                references. The client's own LLM runs inside their SageMaker environment so nothing sensitive leaves
+                their
+                account. Agentic workflows, document tagging and summarisation sit behind a chat interface; phase two
+                scaled coverage to roughly 600 reference documents.</p>
+              <ul class="tags">
+                <li>AWS</li>
+                <li>SageMaker</li>
+                <li>Self-hosted LLM</li>
+                <li>Agentic workflows</li>
+                <li>Document intelligence</li>
+                <li>Evaluation rubrics</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Led the technical delivery team — solution architecture, design calls, sprint execution — across
+                    data scientists, architects, developers, project managers, product owners and client specialists.
+                  </li>
+                  <li>Architected the end-to-end solution: in-account LLM deployment, agent workflows, document
+                    processing, and the chat experience, all inside the client's security and privacy constraints.</li>
+                  <li>Designed a document-intelligence framework with a tagging system that classifies historical
+                    inspection documents and drives rule-based template recommendation.</li>
+                  <li>Added summarisation so users can judge a long document without opening it.</li>
+                  <li>Ran data validation and curation with SMEs; defined selection criteria and built the ingestion
+                    pipelines behind them.</li>
+                  <li>Drove target-state blueprint and feature-prioritisation workshops, assessing feasibility and
+                    complexity against business value to shape the roadmap.</li>
+                  <li>Defined the evaluation framework and user-acceptance rubrics for generated output — quality,
+                    completeness, and fit to requirement.</li>
+                  <li>Facilitated daily technical syncs and bi-weekly demos to keep stakeholders close to the build.
+                  </li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-risk" data-family="genai">
+            <div class="row__meta">
+              <p class="row__dates">2026.05 — 2026.07</p>
+              <p class="row__where">Public sector · Canada</p>
+              <p class="row__tag row__tag--genai">Generative AI</p>
+            </div>
+            <div class="row__body">
+              <h3>Risk-assessment agent for a governance workflow</h3>
+              <p class="row__seat">Technical Lead</p>
+              <p>An agent that modernises a manual governance review: it detects what changed, drafts the risk
+                assessment, and produces the standard report deck. Built on a low-code agent platform over enterprise
+                LLMs, with a human in the loop on every output. The proof of concept hit its two targets — half the
+                analyst effort, 90% change-detection accuracy.</p>
+              <ul class="tags">
+                <li>Microsoft Copilot Studio</li>
+                <li>Enterprise LLMs</li>
+                <li>Change detection</li>
+                <li>Report generation</li>
+                <li>Human-in-the-loop</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Ran discovery workshops to map the end-to-end review workflow and find where the manual
+                    bottlenecks actually were.</li>
+                  <li>Prioritised the risk-assessment agent as the first use case on business impact, feasibility and
+                    readiness — with the specialists, not at them.</li>
+                  <li>Built the proof of concept: automated change detection, AI-assisted assessment, structured risk
+                    summaries, and generated PowerPoint reporting.</li>
+                  <li>Designed the evaluation strategy — benchmarking against historical cases plus human validation of
+                    generated output.</li>
+                  <li>Set the performance targets (50% effort reduction, 90% detection accuracy) and verified the build
+                    met them.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-nominations" data-family="genai ml">
+            <div class="row__meta">
+              <p class="row__dates">2026.03 — 2026.05</p>
+              <p class="row__where">Energy · United States</p>
+              <p class="row__tag row__tag--both">Both families</p>
+            </div>
+            <div class="row__body">
+              <h3>AI-assisted volume nomination workflow</h3>
+              <p class="row__seat">Lead Data Scientist</p>
+              <p>Commercial analysts were hand-translating production forecasts into daily volume nominations. This
+                turns that into a recommendation the analyst reviews — constraint-aware, variance-tracked, and honest
+                about where the forecast is drifting. The shift is from processing every nomination to managing the
+                exceptions.</p>
+              <ul class="tags">
+                <li>Time series</li>
+                <li>Forecast accuracy monitoring</li>
+                <li>Constraint logic</li>
+                <li>LLM extraction</li>
+                <li>Dashboards</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Designed the recommendation framework that turns production forecasts into structured daily
+                    nomination proposals.</li>
+                  <li>Built an accuracy monitoring dashboard that attributes prediction variance to its root cause
+                    across wells and assets.</li>
+                  <li>Wrote logic that adjusts recommendations for storage capacity, outages and deferment schedules.
+                  </li>
+                  <li>Implemented variance tracking across prior nominations, actual production and revised forecasts to
+                    surface commercial exposure early.</li>
+                  <li>Used deferment data for time-series insight generation to improve production visibility.</li>
+                  <li>Applied LLMs to unstructured operational records, pulling relevant production detail out of free
+                    text.</li>
+                  <li>Prototyped the visualisations stakeholders asked for — forecast deviation, operational impact
+                    indicators.</li>
+                  <li>Co-designed the future-state workflow with commercial analysts and operations.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-erp" data-family="genai">
+            <div class="row__meta">
+              <p class="row__dates">2026.01 — 2026.03</p>
+              <p class="row__where">Telecommunications · Canada</p>
+              <p class="row__tag row__tag--genai">Generative AI</p>
+            </div>
+            <div class="row__body">
+              <h3>Agents that configure an ERP system</h3>
+              <p class="row__seat">Lead Data Scientist</p>
+              <p>ERP implementations lose weeks to functional analysts clicking through configuration screens. These
+                agents read a standard spreadsheet and do the setup — company codes, chart of accounts, fiscal year
+                variants, controlling structures — with an analyst approving before anything commits. Roughly 95% less
+                manual configuration time.</p>
+              <ul class="tags">
+                <li>Agent orchestration</li>
+                <li>SAP configuration</li>
+                <li>Queue-based execution</li>
+                <li>Secrets management</li>
+                <li>AWS</li>
+                <li>Google Cloud</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Designed and built configuration agents automating business setup tasks, cutting manual
+                    configuration time by about 95%.</li>
+                  <li>Built a knowledge-based execution framework covering 19+ configuration steps from standardised
+                    instructions.</li>
+                  <li>Wrote orchestration logic that processes multi-row inputs from standard Excel templates, so setup
+                    runs in batches.</li>
+                  <li>Handled credentials through a secret manager rather than anything hand-rolled.</li>
+                  <li>Established queue-based pipelines for sequential execution and run stability.</li>
+                  <li>Benchmarked several LLMs across two clouds for agent performance and reliability.</li>
+                  <li>Kept a human approval gate on every automated output.</li>
+                  <li>Left reusable automation patterns behind for financial reporting, compliance validation and
+                    procurement.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-voice" data-family="genai">
+            <div class="row__meta">
+              <p class="row__dates">2025.06 — 2025.12</p>
+              <p class="row__where">Healthcare · United States</p>
+              <p class="row__tag row__tag--genai">Generative AI</p>
+            </div>
+            <div class="row__body">
+              <h3>Generative AI voice assistant</h3>
+              <p class="row__seat">Lead Data Scientist</p>
+              <p>An enterprise voice bot replacing exact-match, rule-based intent detection with an LLM-driven
+                architecture, to raise self-service containment. Paired with LLM-based reason tagging so the team could
+                finally see <em>why</em> callers were dropping off.</p>
+              <ul class="tags">
+                <li>Voice AI</li>
+                <li>Intent detection</li>
+                <li>Transcript analytics</li>
+                <li>PII / PHI handling</li>
+                <li>Drop-off analysis</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Replaced rule-based intent matching with an LLM-driven voice bot architecture, improving
+                    self-service containment.</li>
+                  <li>Led design and build of LLM-based reason tagging to classify call outcomes and drop-off points.
+                  </li>
+                  <li>Designed the supporting architecture and provisioned the services for transcript processing and
+                    analysis.</li>
+                  <li>Guided client developers on secure transcript storage and credential management for cloud object
+                    storage.</li>
+                  <li>Flagged PII and PHI exposure and enforced a mocked-data approach for the proof of concept to stay
+                    compliant.</li>
+                  <li>Ran the drop-off analysis and turned it into the recommendations that shaped the next model
+                    iteration.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-concierge" data-family="genai">
+            <div class="row__meta">
+              <p class="row__dates">2025.01 — 2025.06</p>
+              <p class="row__where">Public sector · Canada</p>
+              <p class="row__tag row__tag--genai">Generative AI</p>
+            </div>
+            <div class="row__body">
+              <h3>Bilingual HR &amp; pay assistant</h3>
+              <p class="row__seat">Lead Data Scientist</p>
+              <p>The engagement I'd point to first. A bilingual RAG assistant answering both general HR questions from
+                public web content and individual pay questions from structured records — one interface, two very
+                different retrieval problems. Piloted on OpenShift, then migrated to Azure with AI Foundry and a NoSQL
+                vector store for the pre-production phase. Guardrails, bias evaluation and table comprehension were
+                requirements, not extras.</p>
+              <ul class="tags">
+                <li>RAG</li>
+                <li>Bilingual (EN/FR)</li>
+                <li>Elasticsearch</li>
+                <li>Semantic search</li>
+                <li>PostgreSQL</li>
+                <li>Azure AI Foundry</li>
+                <li>OpenShift</li>
+                <li>Guardrails</li>
+                <li>ROUGE / BLEU / BERTScore</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Led delivery of a scalable, production-bound assistant, steering the technical streams and holding
+                    the line on client architecture and compliance requirements.</li>
+                  <li>Extended scope from general HR queries to personal pay questions, using mocked records for
+                    anything sensitive.</li>
+                  <li>Co-built ingestion pipelines for real-time and batch scraping of public web pages, tuning chunking
+                    and the embedding of HTML tables — the part everyone underestimates.</li>
+                  <li>Integrated Elasticsearch with semantic search to improve relevance and survive user typos.</li>
+                  <li>Ran A/B testing to select the LLM on coherence, accuracy and hallucination rate.</li>
+                  <li>Built the prompt layer that structures answers, adds file references, and keeps the front end
+                    readable.</li>
+                  <li>Implemented the first round of guardrails and error handling.</li>
+                  <li>Defined and tracked the metrics: ROUGE, BLEU, BERTScore, perplexity, lexical diversity, bias
+                    assessment.</li>
+                  <li>Directed a PostgreSQL-backed acting-pay explanation module, encoding which scenarios apply to
+                    whom.</li>
+                  <li>Ran guided user-testing sessions and turned the feedback into the deployment-readiness backlog.
+                  </li>
+                  <li>Contributed to the longer-term migration plan, including automated ingestion refresh and expanded
+                    French-language guardrails.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-accelerators" data-family="genai">
+            <div class="row__meta">
+              <p class="row__dates">2024.08 — 2024.12</p>
+              <p class="row__where">Public sector · Canada</p>
+              <p class="row__tag row__tag--genai">Generative AI</p>
+            </div>
+            <div class="row__body">
+              <h3>Generative AI assets &amp; accelerators programme</h3>
+              <p class="row__seat">Lead Data Scientist</p>
+              <p>Less a single build than a campaign: find where generative AI genuinely helps across several work
+                streams, prove it, and teach the client enough that adoption outlives the engagement. Ideation,
+                feasibility assessment, working demos, education sessions.</p>
+              <ul class="tags">
+                <li>IBM Consulting Advantage</li>
+                <li>AI assistants</li>
+                <li>Vision OCR</li>
+                <li>Llama 3.2 Vision</li>
+                <li>Feasibility assessment</li>
+                <li>Enablement</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Worked across streams to stand up 30+ AI assistants that read documents, automate workflow steps
+                    and cut busywork.</li>
+                  <li>Built tools for requirements gathering, impact assessment, stakeholder mapping and code
+                    generation.</li>
+                  <li>Identified OCR improvements using vision LLMs for the hard cases — name extraction, handwritten
+                    responses.</li>
+                  <li>Helped a mapping team finish their future-state deliverables, supplying the code assets and demos
+                    their final report depended on.</li>
+                  <li>Ran education sessions that moved client and internal understanding of generative AI from anxiety
+                    to adoption.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-multimodel" data-family="genai">
+            <div class="row__meta">
+              <p class="row__dates">2024.07 — 2024.08</p>
+              <p class="row__where">Public sector · Canada</p>
+              <p class="row__tag row__tag--genai">Generative AI</p>
+            </div>
+            <div class="row__body">
+              <h3>Secure multi-model conversational AI platform</h3>
+              <p class="row__seat">Lead Data Scientist</p>
+              <p>A conversational AI application for public-sector use: multiple models behind one governed surface,
+                retrieval over both structured and unstructured sources, and AI governance wired in from the start
+                because the data protection standards left no other option.</p>
+              <ul class="tags">
+                <li>Structured &amp; unstructured RAG</li>
+                <li>Multi-model</li>
+                <li>Vector database</li>
+                <li>AI governance</li>
+                <li>Prompt engineering</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Led several AI-customisation streams, driving retrieval-augmented generation across structured and
+                    unstructured data.</li>
+                  <li>Assessed the existing application, found the platform gaps, and upgraded the vector database to
+                    handle unstructured content properly.</li>
+                  <li>Built new structured-data capability and the prompt engineering behind coherent, defensible
+                    answers.</li>
+                  <li>Presented business and technical results to the client weekly — the habit that keeps a pilot from
+                    drifting.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-rag-fix" data-family="genai">
+            <div class="row__meta">
+              <p class="row__dates">2024.05 — 2024.06</p>
+              <p class="row__where">Public sector · Canada</p>
+              <p class="row__tag row__tag--genai">Generative AI</p>
+            </div>
+            <div class="row__body">
+              <h3>Enterprise retrieval platform remediation</h3>
+              <p class="row__seat">Lead Data Scientist</p>
+              <p>A pilot that wouldn't work in the client's environment. Diagnosed and fixed it, kept sensitive data
+                inside their boundary throughout, and made ingestion seven times faster on the way out.</p>
+              <ul class="tags">
+                <li>Troubleshooting</li>
+                <li>Re-ranking</li>
+                <li>Ingestion performance</li>
+                <li>Data residency</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Diagnosed and resolved the blocking issues, ensuring sensitive data stayed put and no unauthorised
+                    transfer occurred.</li>
+                  <li>Ran the test cycles and improved re-ranking and prompt engineering to get coherent, robust
+                    answers.</li>
+                  <li>Raised file-ingestion throughput sevenfold on the chatbot platform.</li>
+                  <li>Backed the project manager in client communication so expectations tracked reality.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-revenue-id" data-family="genai ml">
+            <div class="row__meta">
+              <p class="row__dates">2024.02 — 2024.05</p>
+              <p class="row__where">Postal &amp; logistics · Canada</p>
+              <p class="row__tag row__tag--both">Both families</p>
+            </div>
+            <div class="row__body">
+              <h3>Revenue identification model with generated executive reporting</h3>
+              <p class="row__seat">Senior Data Scientist</p>
+              <p>A model to find high-potential growth accounts and under-penetrated shipping lanes, with generative AI
+                writing the account-specific executive briefing on top. Recall went from just over 50% to 72%,
+                surfacing more than $19M in opportunity — and with it, a noticeable change in how much the client
+                trusted the numbers.</p>
+              <ul class="tags">
+                <li>Supervised learning</li>
+                <li>Feature engineering</li>
+                <li>Penetration analysis</li>
+                <li>Data dictionaries</li>
+                <li>Generated reporting</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Improved recall from just over 50% to 72%, identifying $19M+ in opportunity.</li>
+                  <li>Directed 20+ documented script assets across data engineering, aggregation and penetration
+                    analysis.</li>
+                  <li>Owned feature engineering and wrote the data and feature dictionaries the client still uses to
+                    read the model.</li>
+                  <li>Trained junior data scientists while carrying the bulk of the technical work through shifting
+                    targets.</li>
+                  <li>Kept client communication proactive, and presented to every stakeholder group myself.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-rfp" data-family="genai">
+            <div class="row__meta">
+              <p class="row__dates">2023.07 — 2023.12</p>
+              <p class="row__where">Professional services · internal</p>
+              <p class="row__tag row__tag--genai">Generative AI</p>
+            </div>
+            <div class="row__body">
+              <h3>Generative AI proposal advisor</h3>
+              <p class="row__seat">Senior Data Scientist · engineering &amp; front-end maintainer</p>
+              <p>A RAG advisor for responding to requests for proposal. Drop documents in a folder, pick a business
+                domain, get a drafted answer grounded in what the organisation has actually said before. I also kept
+                the UI alive and the server standing.</p>
+              <ul class="tags">
+                <li>watsonx.ai</li>
+                <li>Watson Discovery</li>
+                <li>Watson Assistant</li>
+                <li>LangChain</li>
+                <li>Vector DB tuning</li>
+                <li>ROUGE</li>
+                <li>CUDA / Ubuntu</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Integrated Watson Discovery with cloud storage and LangChain so retrieval was as simple as
+                    dropping a file in a folder.</li>
+                  <li>Engineered the prompts that turn a general model into a credible proposal advisor.</li>
+                  <li>Let users select a business domain so answers came back tailored rather than generic.</li>
+                  <li>Ran the parameter sweep — chunk size, chunk count, overlap, embedder, vector store, retrieval
+                    method, model mode.</li>
+                  <li>Measured with ROUGE and folded user feedback into each iteration.</li>
+                  <li>Maintained the UI, watched domain scaling, set up the Ubuntu server, configured CUDA, and worked
+                    out what production capacity would actually cost.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-segments" data-family="ml">
+            <div class="row__meta">
+              <p class="row__dates">2023.04 — 2023.05</p>
+              <p class="row__where">Postal &amp; logistics · Canada</p>
+              <p class="row__tag row__tag--ml">Machine learning</p>
+            </div>
+            <div class="row__body">
+              <h3>Customer classification from profile data</h3>
+              <p class="row__seat">Senior Data Scientist</p>
+              <p>Joined several client datasets and put gradient boosting and random forests against the same
+                classification problem, to show what profile-based customer classification could do for their targeting
+                before anyone committed to building it.</p>
+              <ul class="tags">
+                <li>Supervised learning</li>
+                <li>XGBoost</li>
+                <li>Random forest</li>
+                <li>Data integration</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Led the analytics: combined disparate customer datasets and compared XGBoost against random
+                    forest.</li>
+                  <li>Demonstrated the targeting upside concretely enough for the client to act on it.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-parts" data-family="ml">
+            <div class="row__meta">
+              <p class="row__dates">2022.03 — 2022.08</p>
+              <p class="row__where">Aerospace manufacturing</p>
+              <p class="row__tag row__tag--ml">Machine learning</p>
+            </div>
+            <div class="row__body">
+              <h3>Parts demand forecasting enhancement</h3>
+              <p class="row__seat">Senior Data Scientist</p>
+              <p>Existing demand forecasts at region-and-month granularity, made better by feeding them macroeconomic
+                data and weather. Collected IMF macro series, joined weather from an insights engine, then used
+                sequential feature selection to cut the feature count back down. Mean absolute error improved —
+                substantially in APAC.</p>
+              <ul class="tags">
+                <li>Forecasting</li>
+                <li>Feature selection</li>
+                <li>LightGBM</li>
+                <li>Lasso</li>
+                <li>External data</li>
+                <li>MAE</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Collected IMF macroeconomic data and integrated it with weather data from an insights engine.</li>
+                  <li>Applied sequential feature selection — LightGBM, lasso regression, correlation — to reduce
+                    dimensionality without losing signal.</li>
+                  <li>Evaluated on mean absolute error; gains varied by part type and region, with the largest average
+                    improvement in APAC.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-insurance" data-family="ml">
+            <div class="row__meta">
+              <p class="row__dates">2021.03 — 2021.04</p>
+              <p class="row__where">Pension &amp; insurance · Canada</p>
+              <p class="row__tag row__tag--ml">Data engineering</p>
+            </div>
+            <div class="row__body">
+              <h3>Insurance data quality validation</h3>
+              <p class="row__seat">Consultant &amp; Data Scientist</p>
+              <p>Quality validation across home and auto insurance data for an actuarial analytics programme.
+                The deliverable was a data quality report — findings, visualisations, and what to fix first.</p>
+              <ul class="tags">
+                <li>Data quality</li>
+                <li>Validation</li>
+                <li>Actuarial data</li>
+                <li>Visualisation</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Led the validation work across home and auto insurance data, checking integrity and accuracy.</li>
+                  <li>Delivered a data quality report with the visualisations and prioritised recommendations behind it.
+                  </li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-alpha" data-family="ml">
+            <div class="row__meta">
+              <p class="row__dates">2019.12 — 2020.01</p>
+              <p class="row__where">Banking · United States</p>
+              <p class="row__tag row__tag--ml">Machine learning</p>
+            </div>
+            <div class="row__body">
+              <h3>News-driven alpha forecasting dashboard</h3>
+              <p class="row__seat">Data Scientist &amp; front-end developer</p>
+              <p>A dashboard forecasting alpha — the unexplained part of a stock's return — from news. Joined ticker
+                metadata to performance, computed returns on VWAP, and built a custom sentiment dictionary per sector
+                rather than trusting one general-purpose lexicon.</p>
+              <ul class="tags">
+                <li>NLP</li>
+                <li>Sentiment analysis</li>
+                <li>Sector dictionaries</li>
+                <li>VWAP</li>
+                <li>Dashboard</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Merged ticker information with stock performance and calculated returns using VWAP.</li>
+                  <li>Built sector-specific dictionaries on top of an NLP asset to sharpen sentiment signal.</li>
+                  <li>Modelled and visualised the relationships driving alpha, then shipped it as a dashboard the desk
+                    could use.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-weather" data-family="ml">
+            <div class="row__meta">
+              <p class="row__dates">2019.10 — 2019.11</p>
+              <p class="row__where">Banking · Canada</p>
+              <p class="row__tag row__tag--ml">Data engineering</p>
+            </div>
+            <div class="row__body">
+              <h3>Weather impact on macroeconomic indicators</h3>
+              <p class="row__seat">Consultant</p>
+              <p>Research into how weather moves GDP. Feature engineering over weather and GDP time series, then the
+                analysis and modelling, then the deck that made the findings land with a non-technical audience.</p>
+              <ul class="tags">
+                <li>Feature engineering</li>
+                <li>Time series</li>
+                <li>Macroeconomics</li>
+                <li>Research</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Led the research on weather's impact on GDP.</li>
+                  <li>Engineered features from weather and GDP time series, then led analysis and modelling.</li>
+                  <li>Presented the patterns and their implications to the client directly.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+          <li class="row proj" id="p-equities" data-family="ml">
+            <div class="row__meta">
+              <p class="row__dates">2019.03 — 2022.07</p>
+              <p class="row__where">Investment management · Canada</p>
+              <p class="row__tag row__tag--ml">Machine learning</p>
+            </div>
+            <div class="row__body">
+              <h3>Revenue forecasting for US &amp; European equities</h3>
+              <p class="row__seat">Data Scientist</p>
+              <p>My longest-running engagement: raising revenue-forecast hit rate across 1,000+ listed companies.
+                Success on US equities got the mandate extended to Europe. Alternative data — search trends, news,
+                weather — feature-engineered and selected down, with a random forest coming out ahead. Then three
+                years of keeping the daily pipelines running and the client confident.</p>
+              <ul class="tags">
+                <li>Forecasting</li>
+                <li>Random forest</li>
+                <li>Time series</li>
+                <li>NLP</li>
+                <li>Alternative data</li>
+                <li>Production pipelines</li>
+              </ul>
+              <details class="more">
+                <summary>What I did</summary>
+                <ul>
+                  <li>Implemented revenue forecasting analytics for US equities, improving forecast accuracy enough that
+                    the scope expanded to European equities.</li>
+                  <li>Collected and cleaned raw client data alongside search-trend, news and weather sources.</li>
+                  <li>Generated features from time-series and NLP analysis, ran feature selection, and landed on a
+                    random forest as the best performer.</li>
+                  <li>Ran daily operations for the critical pipelines so results arrived on schedule, every schedule.
+                  </li>
+                  <li>Maintained reliability and the client relationship over three years — the least glamorous, most
+                    valuable part.</li>
+                </ul>
+              </details>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── skills ───────────────────────────── -->
+    <section class="band" id="skills" aria-labelledby="skills-h">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">Toolkit</p>
+        <h2 id="skills-h">What I build with</h2>
+
+        <div class="cards">
+          <section class="card" aria-labelledby="sk-1">
+            <h3 id="sk-1">Generative AI &amp; agentic</h3>
+            <ul class="pills">
+              <li>LLMs</li>
+              <li>RAG (structured &amp; unstructured)</li>
+              <li>Agentic workflows</li>
+              <li>Prompt engineering</li>
+              <li>LangChain</li>
+              <li>Vector databases</li>
+              <li>Re-ranking</li>
+              <li>Guardrails</li>
+              <li>Human-in-the-loop design</li>
+              <li>LLM evaluation</li>
+              <li>AI governance</li>
+            </ul>
+          </section>
+
+          <section class="card" aria-labelledby="sk-2">
+            <h3 id="sk-2">Machine learning &amp; analytics</h3>
+            <ul class="pills">
+              <li>Forecasting</li>
+              <li>Time series</li>
+              <li>XGBoost</li>
+              <li>Random forest</li>
+              <li>LightGBM</li>
+              <li>Lasso</li>
+              <li>Sequential feature selection</li>
+              <li>Feature engineering</li>
+              <li>NLP &amp; text analytics</li>
+              <li>Sentiment analysis</li>
+              <li>Data visualisation</li>
+            </ul>
+          </section>
+
+          <section class="card" aria-labelledby="sk-3">
+            <h3 id="sk-3">Languages &amp; engineering</h3>
+            <ul class="pills">
+              <li>Python</li>
+              <li>SQL</li>
+              <li>R</li>
+              <li>PySpark</li>
+              <li>MATLAB</li>
+              <li>Linux / Unix</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>PostgreSQL</li>
+              <li>Elasticsearch</li>
+              <li>Data pipelines</li>
+              <li>Web scraping</li>
+            </ul>
+          </section>
+
+          <section class="card" aria-labelledby="sk-4">
+            <h3 id="sk-4">Cloud &amp; platforms</h3>
+            <ul class="pills">
+              <li>AWS</li>
+              <li>Amazon SageMaker</li>
+              <li>Microsoft Azure</li>
+              <li>Azure AI Foundry</li>
+              <li>Cosmos DB</li>
+              <li>Google Cloud</li>
+              <li>IBM Cloud</li>
+              <li>OpenShift</li>
+              <li>IBM watsonx</li>
+              <li>Watson Discovery</li>
+              <li>Watson Assistant</li>
+              <li>Microsoft Copilot Studio</li>
+            </ul>
+          </section>
+
+          <section class="card" aria-labelledby="sk-5">
+            <h3 id="sk-5">Leading the work</h3>
+            <ul class="pills">
+              <li>Technical delivery leadership</li>
+              <li>Solution architecture</li>
+              <li>Sprint execution</li>
+              <li>Discovery &amp; blueprint workshops</li>
+              <li>Feature prioritisation</li>
+              <li>C-suite storytelling</li>
+              <li>Mentoring</li>
+              <li>Client relationships</li>
+            </ul>
+          </section>
+
+          <section class="card" aria-labelledby="sk-6">
+            <h3 id="sk-6">Certifications</h3>
+            <ul class="pills">
+              <li>AWS Certified Cloud Practitioner</li>
+              <li>Python for Data Science and AI</li>
+              <li>Society of Actuaries — Exam P</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── education + languages ───────────────────────────── -->
+    <section class="band band--tint" id="education" aria-labelledby="edu-h">
+      <div class="wrap edu__grid">
+        <div>
+          <p class="eyebrow eyebrow--rule">Education</p>
+          <h2 id="edu-h">Statistics, economics, computer science</h2>
+
+          <ol class="roles roles--tight">
+            <li class="row">
+              <div class="row__meta">
+                <p class="row__dates">2021 — 2023</p>
+                <p class="row__where">Toronto, Canada</p>
+              </div>
+              <div class="row__body">
+                <h3>Master of Arts, Economics</h3>
+                <p>University of Toronto</p>
+              </div>
+            </li>
+            <li class="row">
+              <div class="row__meta">
+                <p class="row__dates">2016 — 2017</p>
+                <p class="row__where">Hamilton, Canada</p>
+              </div>
+              <div class="row__body">
+                <h3>Master of Science, Statistics <span class="row__note">(thesis)</span></h3>
+                <p>McMaster University · GPA 11.83&nbsp;/&nbsp;12</p>
+                <p class="row__thesis"
+                  href="https://prod-ms-be.lib.mcmaster.ca/server/api/core/bitstreams/de4fbf5c-8b92-477d-aa65-94ef4b47f840/content"
+                  rel="noopener">Thesis: <cite>Pricing Asian Options and Basket Options by Monte Carlo
+                    Methods</cite></p>
+              </div>
+            </li>
+            <li class="row">
+              <div class="row__meta">
+                <p class="row__dates">2014 — 2016</p>
+                <p class="row__where">Wuhan, China</p>
+              </div>
+              <div class="row__body">
+                <h3>Bachelor of Engineering, Computer Science &amp; Technology</h3>
+                <p>Wuhan University</p>
+              </div>
+            </li>
+            <li class="row">
+              <div class="row__meta">
+                <p class="row__dates">2012 — 2016</p>
+                <p class="row__where">Wuhan, China</p>
+              </div>
+              <div class="row__body">
+                <h3>Bachelor of Economics, Mathematical Finance</h3>
+                <p>Wuhan University of Technology</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="langs">
+          <p class="eyebrow eyebrow--rule">Languages</p>
+          <h3 class="langs__h">Three, at three depths</h3>
+          <dl>
+            <div class="lang">
+              <dt>Chinese <span lang="zh-Hans" class="lang__native">中文</span></dt>
+              <dd>
+                <span class="lang__level">Native or bilingual proficiency</span>
+                <span class="meter" aria-hidden="true"><i style="--fill:100%"></i></span>
+              </dd>
+            </div>
+            <div class="lang">
+              <dt>English</dt>
+              <dd>
+                <span class="lang__level">Native or bilingual proficiency</span>
+                <span class="meter" aria-hidden="true"><i style="--fill:100%"></i></span>
+              </dd>
+            </div>
+            <div class="lang">
+              <dt>Spanish <span lang="es" class="lang__native">Español</span></dt>
+              <dd>
+                <span class="lang__level">Elementary proficiency</span>
+                <span class="meter" aria-hidden="true"><i style="--fill:25%"></i></span>
+              </dd>
+            </div>
+          </dl>
+          <p class="langs__note">Delivered a fully bilingual English / French assistant for a Canadian public-sector
+            client — including French-language guardrails.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── beyond work ───────────────────────────── -->
+    <section class="band" id="beyond" aria-labelledby="beyond-h">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">Beyond work</p>
+        <h2 id="beyond-h">Off the clock</h2>
+
+        <ul class="hobbies">
+          <li>
+            <h3>Badminton</h3>
+            <p>Trained competitively for four years in primary school. The footwork never left.</p>
+          </li>
+          <li>
+            <h3>Tennis</h3>
+            <p>Playing and spectating. Toronto's tour stop is a fixed point in my August.</p>
+          </li>
+          <li>
+            <h3>Bakery</h3>
+            <p>Asian bakery and patisserie, mostly. Milk bread, matcha cakes, egg tarts, cookies.</p>
+          </li>
+          <li>
+            <h3>Photography</h3>
+            <p>Usually whatever just came out of the oven, occasionally something further away.</p>
+          </li>
+          <li>
+            <h3>Movies</h3>
+            <p>Long lists, slow progress, no regrets.</p>
+          </li>
+          <li>
+            <h3>Travelling</h3>
+            <p>Collecting golden hours in unfamiliar places.</p>
+          </li>
+        </ul>
+
+        <div class="gallery">
+          <!-- gallery:start -->
+          <div class="gallery__filters" role="group" aria-label="Filter photos by album">
+            <button type="button" class="chip" data-album="all" aria-pressed="true">All</button>
+            <button type="button" class="chip" data-album="bakery" aria-pressed="false">Bakery</button>
+            <button type="button" class="chip" data-album="court" aria-pressed="false">Court time</button>
+            <button type="button" class="chip" data-album="travel" aria-pressed="false">Travel</button>
+          </div>
+          <ul class="gallery__grid" id="gallery-grid">
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="0" data-full="assets/img/gallery/bakery-01-1600.jpg"
+                data-full-webp="assets/img/gallery/bakery-01-1600.webp" data-caption="Matcha cream cake"
+                data-alt="A matcha cream cake photographed from above, ringed with piped rosettes and topped with halved strawberries and blueberries arranged in a radiating pattern">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-01-400.webp 400w, assets/img/gallery/bakery-01-800.webp 800w, assets/img/gallery/bakery-01-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-01-400.jpg"
+                    srcset="assets/img/gallery/bakery-01-400.jpg 400w, assets/img/gallery/bakery-01-800.jpg 800w, assets/img/gallery/bakery-01-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="400"
+                    loading="lazy" decoding="async"
+                    alt="A matcha cream cake photographed from above, ringed with piped rosettes and topped with halved strawberries and blueberries arranged in a radiating pattern">
+                </picture>
+                <span class="shot__caption">Matcha cream cake</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="1" data-full="assets/img/gallery/bakery-02-1600.jpg"
+                data-full-webp="assets/img/gallery/bakery-02-1600.webp" data-caption="Birthday cake, with a face"
+                data-alt="A small matcha layer cake dusted with green tea powder, decorated with a piped smiling face and a border of blueberries and pale green rosettes">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-02-400.webp 400w, assets/img/gallery/bakery-02-800.webp 800w, assets/img/gallery/bakery-02-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-02-400.jpg"
+                    srcset="assets/img/gallery/bakery-02-400.jpg 400w, assets/img/gallery/bakery-02-800.jpg 800w, assets/img/gallery/bakery-02-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A small matcha layer cake dusted with green tea powder, decorated with a piped smiling face and a border of blueberries and pale green rosettes">
+                </picture>
+                <span class="shot__caption">Birthday cake, with a face</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="2" data-full="assets/img/gallery/bakery-03-1600.jpg"
+                data-full-webp="assets/img/gallery/bakery-03-1600.webp" data-caption="Someone&#x27;s birthday"
+                data-alt="A matcha birthday cake ringed with raspberries and piped cream, with Happy Birthday written across a white disc on top">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-03-400.webp 400w, assets/img/gallery/bakery-03-800.webp 800w, assets/img/gallery/bakery-03-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-03-400.jpg"
+                    srcset="assets/img/gallery/bakery-03-400.jpg 400w, assets/img/gallery/bakery-03-800.jpg 800w, assets/img/gallery/bakery-03-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="267"
+                    loading="lazy" decoding="async"
+                    alt="A matcha birthday cake ringed with raspberries and piped cream, with Happy Birthday written across a white disc on top">
+                </picture>
+                <span class="shot__caption">Someone&#x27;s birthday</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="3" data-full="assets/img/gallery/bakery-04-800.jpg"
+                data-full-webp="assets/img/gallery/bakery-04-800.webp" data-caption="Proofed and ready"
+                data-alt="Two loaf pans of proofed milk bread dough, one plain and one tinted pandan green, beside a bag of bread flour">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-04-400.webp 400w, assets/img/gallery/bakery-04-800.webp 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-04-400.jpg"
+                    srcset="assets/img/gallery/bakery-04-400.jpg 400w, assets/img/gallery/bakery-04-800.jpg 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="Two loaf pans of proofed milk bread dough, one plain and one tinted pandan green, beside a bag of bread flour">
+                </picture>
+                <span class="shot__caption">Proofed and ready</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="4" data-full="assets/img/gallery/bakery-05-800.jpg"
+                data-full-webp="assets/img/gallery/bakery-05-800.webp" data-caption="Milk bread, last ten minutes"
+                data-alt="Two loaf pans of milk bread browning inside an oven, one plain and one tinted pale green with pandan">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-05-400.webp 400w, assets/img/gallery/bakery-05-800.webp 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-05-400.jpg"
+                    srcset="assets/img/gallery/bakery-05-400.jpg 400w, assets/img/gallery/bakery-05-800.jpg 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="Two loaf pans of milk bread browning inside an oven, one plain and one tinted pale green with pandan">
+                </picture>
+                <span class="shot__caption">Milk bread, last ten minutes</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="5" data-full="assets/img/gallery/bakery-06-1600.jpg"
+                data-full-webp="assets/img/gallery/bakery-06-1600.webp" data-caption="Oat-topped loaf"
+                data-alt="A three-lobed milk bread loaf resting in its pan, glazed and scattered with rolled oats, next to a bowl of leftover egg wash">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-06-400.webp 400w, assets/img/gallery/bakery-06-800.webp 800w, assets/img/gallery/bakery-06-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-06-400.jpg"
+                    srcset="assets/img/gallery/bakery-06-400.jpg 400w, assets/img/gallery/bakery-06-800.jpg 800w, assets/img/gallery/bakery-06-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A three-lobed milk bread loaf resting in its pan, glazed and scattered with rolled oats, next to a bowl of leftover egg wash">
+                </picture>
+                <span class="shot__caption">Oat-topped loaf</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="6" data-full="assets/img/gallery/bakery-07-1600.jpg"
+                data-full-webp="assets/img/gallery/bakery-07-1600.webp" data-caption="Black sesame swirl, crumb shot"
+                data-alt="A loaf of black sesame swirl milk bread torn open by hand to show the marbled, feathery crumb inside">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-07-400.webp 400w, assets/img/gallery/bakery-07-800.webp 800w, assets/img/gallery/bakery-07-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-07-400.jpg"
+                    srcset="assets/img/gallery/bakery-07-400.jpg 400w, assets/img/gallery/bakery-07-800.jpg 800w, assets/img/gallery/bakery-07-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A loaf of black sesame swirl milk bread torn open by hand to show the marbled, feathery crumb inside">
+                </picture>
+                <span class="shot__caption">Black sesame swirl, crumb shot</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="7" data-full="assets/img/gallery/bakery-08-1600.jpg"
+                data-full-webp="assets/img/gallery/bakery-08-1600.webp" data-caption="Egg tarts and blueberry tarts"
+                data-alt="Egg tarts and blueberry tarts in foil cases cooling on a wire rack, with a mint green electric kettle behind them">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-08-400.webp 400w, assets/img/gallery/bakery-08-800.webp 800w, assets/img/gallery/bakery-08-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-08-400.jpg"
+                    srcset="assets/img/gallery/bakery-08-400.jpg 400w, assets/img/gallery/bakery-08-800.jpg 800w, assets/img/gallery/bakery-08-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="Egg tarts and blueberry tarts in foil cases cooling on a wire rack, with a mint green electric kettle behind them">
+                </picture>
+                <span class="shot__caption">Egg tarts and blueberry tarts</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="8" data-full="assets/img/gallery/bakery-09-1600.jpg"
+                data-full-webp="assets/img/gallery/bakery-09-1600.webp"
+                data-caption="Matcha and double chocolate thumbprints"
+                data-alt="Matcha green and dark chocolate thumbprint cookies pressed with chunks of chocolate, cooling on parchment paper">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-09-400.webp 400w, assets/img/gallery/bakery-09-800.webp 800w, assets/img/gallery/bakery-09-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-09-400.jpg"
+                    srcset="assets/img/gallery/bakery-09-400.jpg 400w, assets/img/gallery/bakery-09-800.jpg 800w, assets/img/gallery/bakery-09-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="Matcha green and dark chocolate thumbprint cookies pressed with chunks of chocolate, cooling on parchment paper">
+                </picture>
+                <span class="shot__caption">Matcha and double chocolate thumbprints</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="9" data-full="assets/img/gallery/bakery-10-1600.jpg"
+                data-full-webp="assets/img/gallery/bakery-10-1600.webp" data-caption="Chocolate chunk, in the oven"
+                data-alt="Chocolate chunk cookies spread across a foil-lined tray inside a hot oven">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-10-400.webp 400w, assets/img/gallery/bakery-10-800.webp 800w, assets/img/gallery/bakery-10-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-10-400.jpg"
+                    srcset="assets/img/gallery/bakery-10-400.jpg 400w, assets/img/gallery/bakery-10-800.jpg 800w, assets/img/gallery/bakery-10-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="Chocolate chunk cookies spread across a foil-lined tray inside a hot oven">
+                </picture>
+                <span class="shot__caption">Chocolate chunk, in the oven</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="10" data-full="assets/img/gallery/bakery-11-1600.jpg"
+                data-full-webp="assets/img/gallery/bakery-11-1600.webp" data-caption="Coconut chocolate chip cookies"
+                data-alt="Coconut chocolate chip cookies studded with chocolate buttons, cooling on a wire rack">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-11-400.webp 400w, assets/img/gallery/bakery-11-800.webp 800w, assets/img/gallery/bakery-11-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-11-400.jpg"
+                    srcset="assets/img/gallery/bakery-11-400.jpg 400w, assets/img/gallery/bakery-11-800.jpg 800w, assets/img/gallery/bakery-11-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="Coconut chocolate chip cookies studded with chocolate buttons, cooling on a wire rack">
+                </picture>
+                <span class="shot__caption">Coconut chocolate chip cookies</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="11" data-full="assets/img/gallery/bakery-12-1600.jpg"
+                data-full-webp="assets/img/gallery/bakery-12-1600.webp" data-caption="Tanghulu"
+                data-alt="Wooden skewers of candied fruit — green grapes, mandarin segments, cherries and blueberries — glossy with a hardened sugar shell">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-12-400.webp 400w, assets/img/gallery/bakery-12-800.webp 800w, assets/img/gallery/bakery-12-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-12-400.jpg"
+                    srcset="assets/img/gallery/bakery-12-400.jpg 400w, assets/img/gallery/bakery-12-800.jpg 800w, assets/img/gallery/bakery-12-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="Wooden skewers of candied fruit — green grapes, mandarin segments, cherries and blueberries — glossy with a hardened sugar shell">
+                </picture>
+                <span class="shot__caption">Tanghulu</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="bakery">
+              <button type="button" class="shot" data-index="12" data-full="assets/img/gallery/bakery-13-1600.jpg"
+                data-full-webp="assets/img/gallery/bakery-13-1600.webp" data-caption="Pumpkin biscuits for the dog"
+                data-alt="Bone-shaped pumpkin dog biscuits topped with black sesame seeds, cooling on a wire rack beside a batch of cookies">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/bakery-13-400.webp 400w, assets/img/gallery/bakery-13-800.webp 800w, assets/img/gallery/bakery-13-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/bakery-13-400.jpg"
+                    srcset="assets/img/gallery/bakery-13-400.jpg 400w, assets/img/gallery/bakery-13-800.jpg 800w, assets/img/gallery/bakery-13-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="Bone-shaped pumpkin dog biscuits topped with black sesame seeds, cooling on a wire rack beside a batch of cookies">
+                </picture>
+                <span class="shot__caption">Pumpkin biscuits for the dog</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="court">
+              <button type="button" class="shot" data-index="13" data-full="assets/img/gallery/court-01-1600.jpg"
+                data-full-webp="assets/img/gallery/court-01-1600.webp" data-caption="Serve, autumn league"
+                data-alt="A tennis player mid-serve on an outdoor blue hard court, racket raised and ball in the air against a clear sky, with autumn trees behind the fence">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/court-01-400.webp 400w, assets/img/gallery/court-01-800.webp 800w, assets/img/gallery/court-01-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/court-01-400.jpg"
+                    srcset="assets/img/gallery/court-01-400.jpg 400w, assets/img/gallery/court-01-800.jpg 800w, assets/img/gallery/court-01-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A tennis player mid-serve on an outdoor blue hard court, racket raised and ball in the air against a clear sky, with autumn trees behind the fence">
+                </picture>
+                <span class="shot__caption">Serve, autumn league</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="court">
+              <button type="button" class="shot" data-index="14" data-full="assets/img/gallery/court-02-1600.jpg"
+                data-full-webp="assets/img/gallery/court-02-1600.webp" data-caption="New strings"
+                data-alt="A lavender tennis racket held up against a blue hard court, balls scattered across the far side and cloud overhead">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/court-02-400.webp 400w, assets/img/gallery/court-02-800.webp 800w, assets/img/gallery/court-02-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/court-02-400.jpg"
+                    srcset="assets/img/gallery/court-02-400.jpg 400w, assets/img/gallery/court-02-800.jpg 800w, assets/img/gallery/court-02-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A lavender tennis racket held up against a blue hard court, balls scattered across the far side and cloud overhead">
+                </picture>
+                <span class="shot__caption">New strings</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="court">
+              <button type="button" class="shot" data-index="15" data-full="assets/img/gallery/court-03-800.jpg"
+                data-full-webp="assets/img/gallery/court-03-800.webp" data-caption="Sunset over centre court"
+                data-alt="An ATP Tour match on a stadium court at sunset, pink clouds above a full crowd, a player standing at the baseline">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/court-03-400.webp 400w, assets/img/gallery/court-03-800.webp 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/court-03-400.jpg"
+                    srcset="assets/img/gallery/court-03-400.jpg 400w, assets/img/gallery/court-03-800.jpg 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="An ATP Tour match on a stadium court at sunset, pink clouds above a full crowd, a player standing at the baseline">
+                </picture>
+                <span class="shot__caption">Sunset over centre court</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="court">
+              <button type="button" class="shot" data-index="16" data-full="assets/img/gallery/court-04-800.jpg"
+                data-full-webp="assets/img/gallery/court-04-800.webp" data-caption="Afternoon session"
+                data-alt="A tennis player following through on a shot on a stadium court under a blue sky with scattered cloud, spectators in the stands behind">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/court-04-400.webp 400w, assets/img/gallery/court-04-800.webp 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/court-04-400.jpg"
+                    srcset="assets/img/gallery/court-04-400.jpg 400w, assets/img/gallery/court-04-800.jpg 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A tennis player following through on a shot on a stadium court under a blue sky with scattered cloud, spectators in the stands behind">
+                </picture>
+                <span class="shot__caption">Afternoon session</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="court">
+              <button type="button" class="shot" data-index="17" data-full="assets/img/gallery/court-05-800.jpg"
+                data-full-webp="assets/img/gallery/court-05-800.webp" data-caption="Waiting on serve"
+                data-alt="A player crouched low to receive serve on a stadium court, the stands packed behind and a tournament clock at the baseline">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/court-05-400.webp 400w, assets/img/gallery/court-05-800.webp 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/court-05-400.jpg"
+                    srcset="assets/img/gallery/court-05-400.jpg 400w, assets/img/gallery/court-05-800.jpg 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A player crouched low to receive serve on a stadium court, the stands packed behind and a tournament clock at the baseline">
+                </picture>
+                <span class="shot__caption">Waiting on serve</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="court">
+              <button type="button" class="shot" data-index="18" data-full="assets/img/gallery/court-06-800.jpg"
+                data-full-webp="assets/img/gallery/court-06-800.webp" data-caption="Running it down"
+                data-alt="A player sprinting along the baseline of a stadium court to reach a ball, sponsor boards and a full crowd behind">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/court-06-400.webp 400w, assets/img/gallery/court-06-800.webp 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/court-06-400.jpg"
+                    srcset="assets/img/gallery/court-06-400.jpg 400w, assets/img/gallery/court-06-800.jpg 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A player sprinting along the baseline of a stadium court to reach a ball, sponsor boards and a full crowd behind">
+                </picture>
+                <span class="shot__caption">Running it down</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="court">
+              <button type="button" class="shot" data-index="19" data-full="assets/img/gallery/court-07-800.jpg"
+                data-full-webp="assets/img/gallery/court-07-800.webp" data-caption="Night serve"
+                data-alt="A tennis player tossing the ball to serve on a floodlit stadium court at night, the air hazy with light">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/court-07-400.webp 400w, assets/img/gallery/court-07-800.webp 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/court-07-400.jpg"
+                    srcset="assets/img/gallery/court-07-400.jpg 400w, assets/img/gallery/court-07-800.jpg 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A tennis player tossing the ball to serve on a floodlit stadium court at night, the air hazy with light">
+                </picture>
+                <span class="shot__caption">Night serve</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="court">
+              <button type="button" class="shot" data-index="20" data-full="assets/img/gallery/court-08-800.jpg"
+                data-full-webp="assets/img/gallery/court-08-800.webp" data-caption="Between points"
+                data-alt="A player in a yellow shirt walking the baseline between points on a stadium court, the match clock reading one thirty-five">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/court-08-400.webp 400w, assets/img/gallery/court-08-800.webp 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/court-08-400.jpg"
+                    srcset="assets/img/gallery/court-08-400.jpg 400w, assets/img/gallery/court-08-800.jpg 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A player in a yellow shirt walking the baseline between points on a stadium court, the match clock reading one thirty-five">
+                </picture>
+                <span class="shot__caption">Between points</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="court">
+              <button type="button" class="shot" data-index="21" data-full="assets/img/gallery/court-09-800.jpg"
+                data-full-webp="assets/img/gallery/court-09-800.webp" data-caption="From the stands"
+                data-alt="A night tennis match seen from the spectator stands, the scoreboard lit up beyond the court and a player about to hit a forehand">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/court-09-400.webp 400w, assets/img/gallery/court-09-800.webp 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/court-09-400.jpg"
+                    srcset="assets/img/gallery/court-09-400.jpg 400w, assets/img/gallery/court-09-800.jpg 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A night tennis match seen from the spectator stands, the scoreboard lit up beyond the court and a player about to hit a forehand">
+                </picture>
+                <span class="shot__caption">From the stands</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="court">
+              <button type="button" class="shot" data-index="22" data-full="assets/img/gallery/court-10-1600.jpg"
+                data-full-webp="assets/img/gallery/court-10-1600.webp" data-caption="Tournament grounds"
+                data-alt="A person sitting in front of oversized white letters spelling a tournament hashtag next to a giant tennis ball sculpture on a sunny day">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/court-10-400.webp 400w, assets/img/gallery/court-10-800.webp 800w, assets/img/gallery/court-10-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/court-10-400.jpg"
+                    srcset="assets/img/gallery/court-10-400.jpg 400w, assets/img/gallery/court-10-800.jpg 800w, assets/img/gallery/court-10-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="300"
+                    loading="lazy" decoding="async"
+                    alt="A person sitting in front of oversized white letters spelling a tournament hashtag next to a giant tennis ball sculpture on a sunny day">
+                </picture>
+                <span class="shot__caption">Tournament grounds</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="court">
+              <button type="button" class="shot" data-index="23" data-full="assets/img/gallery/court-11-800.jpg"
+                data-full-webp="assets/img/gallery/court-11-800.webp" data-caption="Signed, after the last match"
+                data-alt="A hand holding up a signed tennis ball in front of an empty floodlit stadium late at night">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/court-11-400.webp 400w, assets/img/gallery/court-11-800.webp 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/court-11-400.jpg"
+                    srcset="assets/img/gallery/court-11-400.jpg 400w, assets/img/gallery/court-11-800.jpg 800w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A hand holding up a signed tennis ball in front of an empty floodlit stadium late at night">
+                </picture>
+                <span class="shot__caption">Signed, after the last match</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="travel">
+              <button type="button" class="shot" data-index="24" data-full="assets/img/gallery/travel-01-1600.jpg"
+                data-full-webp="assets/img/gallery/travel-01-1600.webp" data-caption="Peggy&#x27;s Cove, Nova Scotia"
+                data-alt="A white lighthouse standing on wave-smoothed granite at Peggy&#x27;s Cove, Nova Scotia, under a wide sky of scattered cloud with tide pools in the foreground">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/travel-01-400.webp 400w, assets/img/gallery/travel-01-800.webp 800w, assets/img/gallery/travel-01-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/travel-01-400.jpg"
+                    srcset="assets/img/gallery/travel-01-400.jpg 400w, assets/img/gallery/travel-01-800.jpg 800w, assets/img/gallery/travel-01-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="300"
+                    loading="lazy" decoding="async"
+                    alt="A white lighthouse standing on wave-smoothed granite at Peggy&#x27;s Cove, Nova Scotia, under a wide sky of scattered cloud with tide pools in the foreground">
+                </picture>
+                <span class="shot__caption">Peggy&#x27;s Cove, Nova Scotia</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="travel">
+              <button type="button" class="shot" data-index="25" data-full="assets/img/gallery/travel-02-1600.jpg"
+                data-full-webp="assets/img/gallery/travel-02-1600.webp" data-caption="Brooklyn Bridge, looking up"
+                data-alt="The stone tower and fanned steel cables of the Brooklyn Bridge photographed from the walkway against a clear blue sky">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/travel-02-400.webp 400w, assets/img/gallery/travel-02-800.webp 800w, assets/img/gallery/travel-02-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/travel-02-400.jpg"
+                    srcset="assets/img/gallery/travel-02-400.jpg 400w, assets/img/gallery/travel-02-800.jpg 800w, assets/img/gallery/travel-02-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="The stone tower and fanned steel cables of the Brooklyn Bridge photographed from the walkway against a clear blue sky">
+                </picture>
+                <span class="shot__caption">Brooklyn Bridge, looking up</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="travel">
+              <button type="button" class="shot" data-index="26" data-full="assets/img/gallery/travel-03-1600.jpg"
+                data-full-webp="assets/img/gallery/travel-03-1600.webp" data-caption="Hong Kong, blue hour"
+                data-alt="Hong Kong harbour at dusk seen from above, the convention centre&#x27;s curved white roof in the foreground and the Kowloon skyline lit across the water">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/travel-03-400.webp 400w, assets/img/gallery/travel-03-800.webp 800w, assets/img/gallery/travel-03-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/travel-03-400.jpg"
+                    srcset="assets/img/gallery/travel-03-400.jpg 400w, assets/img/gallery/travel-03-800.jpg 800w, assets/img/gallery/travel-03-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="300"
+                    loading="lazy" decoding="async"
+                    alt="Hong Kong harbour at dusk seen from above, the convention centre&#x27;s curved white roof in the foreground and the Kowloon skyline lit across the water">
+                </picture>
+                <span class="shot__caption">Hong Kong, blue hour</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="travel">
+              <button type="button" class="shot" data-index="27" data-full="assets/img/gallery/travel-04-1600.jpg"
+                data-full-webp="assets/img/gallery/travel-04-1600.webp" data-caption="Florida, golden hour"
+                data-alt="A person in Mickey Mouse ears walking down a theme park boulevard at sunset, palm trees and a tall art deco tower catching the last light">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/travel-04-400.webp 400w, assets/img/gallery/travel-04-800.webp 800w, assets/img/gallery/travel-04-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/travel-04-400.jpg"
+                    srcset="assets/img/gallery/travel-04-400.jpg 400w, assets/img/gallery/travel-04-800.jpg 800w, assets/img/gallery/travel-04-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A person in Mickey Mouse ears walking down a theme park boulevard at sunset, palm trees and a tall art deco tower catching the last light">
+                </picture>
+                <span class="shot__caption">Florida, golden hour</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="travel">
+              <button type="button" class="shot" data-index="28" data-full="assets/img/gallery/travel-05-1600.jpg"
+                data-full-webp="assets/img/gallery/travel-05-1600.webp"
+                data-caption="Algonquin Provincial Park, Peak colour"
+                data-alt="A boardwalk trail winding through Algonquin Provincial Park at peak autumn colour, gold and orange leaves arching overhead">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/travel-05-400.webp 400w, assets/img/gallery/travel-05-800.webp 800w, assets/img/gallery/travel-05-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/travel-05-400.jpg"
+                    srcset="assets/img/gallery/travel-05-400.jpg 400w, assets/img/gallery/travel-05-800.jpg 800w, assets/img/gallery/travel-05-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A boardwalk trail winding through Algonquin Provincial Park at peak autumn colour, gold and orange leaves arching overhead">
+                </picture>
+                <span class="shot__caption">Algonquin Provincial Park, Peak colour</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="travel">
+              <button type="button" class="shot" data-index="29" data-full="assets/img/gallery/travel-06-1600.jpg"
+                data-full-webp="assets/img/gallery/travel-06-1600.webp" data-caption="The Starry Night, in person"
+                data-alt="Van Gogh&#x27;s painting The Starry Night hanging in a gallery, its swirling blue night sky and dark cypress tree set in a black frame">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/travel-06-400.webp 400w, assets/img/gallery/travel-06-800.webp 800w, assets/img/gallery/travel-06-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/travel-06-400.jpg"
+                    srcset="assets/img/gallery/travel-06-400.jpg 400w, assets/img/gallery/travel-06-800.jpg 800w, assets/img/gallery/travel-06-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="Van Gogh&#x27;s painting The Starry Night hanging in a gallery, its swirling blue night sky and dark cypress tree set in a black frame">
+                </picture>
+                <span class="shot__caption">The Starry Night, in person</span>
+              </button>
+            </li>
+            <li class="gallery__item" data-album="travel">
+              <button type="button" class="shot" data-index="30" data-full="assets/img/gallery/travel-07-1600.jpg"
+                data-full-webp="assets/img/gallery/travel-07-1600.webp"
+                data-caption="McDonald&#x27;s astronaut, Houston"
+                data-alt="A life-size astronaut statue holding up a carton of fries outside a McDonald&#x27;s near Houston, under a heavy grey sky">
+                <picture>
+                  <source type="image/webp"
+                    srcset="assets/img/gallery/travel-07-400.webp 400w, assets/img/gallery/travel-07-800.webp 800w, assets/img/gallery/travel-07-1600.webp 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw">
+                  <img src="assets/img/gallery/travel-07-400.jpg"
+                    srcset="assets/img/gallery/travel-07-400.jpg 400w, assets/img/gallery/travel-07-800.jpg 800w, assets/img/gallery/travel-07-1600.jpg 1600w"
+                    sizes="(min-width: 60rem) 21rem, (min-width: 34rem) 45vw, 92vw" width="400" height="533"
+                    loading="lazy" decoding="async"
+                    alt="A life-size astronaut statue holding up a carton of fries outside a McDonald&#x27;s near Houston, under a heavy grey sky">
+                </picture>
+                <span class="shot__caption">McDonald&#x27;s astronaut, Houston</span>
+              </button>
+            </li>
+          </ul>
+          <p class="gallery__count" role="status" data-total="31">Showing all 31 photos.</p>
+          <!-- gallery:end -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── connect ───────────────────────────── -->
+    <section class="band band--invert" id="connect" aria-labelledby="connect-h">
+      <div class="wrap connect">
+        <p class="eyebrow eyebrow--rule">Connect</p>
+        <h2 id="connect-h">Let's talk on LinkedIn</h2>
+        <p class="connect__lede">LinkedIn is the way to reach me — message or connection request, both work. I don't
+          publish an email address or phone number here, and I read LinkedIn more reliably than either.</p>
+
+        <div class="connect__links">
+          <a class="btn btn--primary btn--lg" href="https://www.linkedin.com/in/jin-zeng-642945151/" rel="noopener">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+            </svg>
+            Connect on LinkedIn
+          </a>
+          <a class="btn btn--ghost btn--lg btn--on-dark" href="https://github.com/JJJZeng" rel="noopener">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1a2.7 2.7 0 0 1 .8-1.7c-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.1-.4-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <p>© <span data-year>2026</span> Jin Zeng · Toronto, Canada</p>
+      <p class="foot__note">Built by hand — static HTML, CSS and a little JavaScript. No trackers, no cookies,
+        no third-party requests.</p>
+    </div>
+  </footer>
+
+  <!-- lightbox -->
+  <dialog class="lb" id="lightbox" aria-label="Photo viewer">
+    <button class="lb__close" type="button" data-lb-close>
+      <span class="vh">Close photo viewer</span>
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22">
+        <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <figure class="lb__fig">
+      <!-- src="" would resolve to this document and fire a wasted request, so the
+         placeholder is an empty inline SVG until JavaScript swaps the photo in. -->
+      <img data-lb-img alt="" width="1600" height="1200"
+        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%203'/%3E">
+      <figcaption>
+        <span data-lb-cap></span>
+        <span class="lb__count" data-lb-count></span>
+      </figcaption>
+    </figure>
+    <button class="lb__nav lb__nav--prev" type="button" data-lb-prev>
+      <span class="vh">Previous photo</span>
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
+        <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <button class="lb__nav lb__nav--next" type="button" data-lb-next>
+      <span class="vh">Next photo</span>
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
+        <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+  </dialog>
+
+  <!-- i18n.js must load before main.js: main.js reads window.JZ_I18N at startup.
+     Both are deferred, and deferred scripts run in document order. -->
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+
+</html>
