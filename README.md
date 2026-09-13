@@ -18,6 +18,35 @@ cleanly as a résumé.
 
 ---
 
+## Before you push
+
+If you edited `style.css`, `main.js` or `i18n.js`, re-stamp the asset URLs:
+
+```bash
+python3 tools/stamp_assets.py
+```
+
+**Why this matters.** GitHub Pages serves assets with `Cache-Control: max-age=600`.
+Without a version in the URL, a returning visitor can be handed the new HTML while
+still holding a ten-minute-old stylesheet from cache — which renders the page with
+the wrong CSS and looks thoroughly broken. (This has happened once already: the
+timeline bands collapsed to plain text and the spam honeypot became visible.)
+
+The script hashes each file and writes `?v=<hash>` into every page that references
+it, so a changed file gets a new URL and is fetched at once, while unchanged files
+stay cached. It is idempotent — safe to run any time — and `--check` exits non-zero
+if the stamps have drifted, which makes it usable as a pre-push guard:
+
+```bash
+python3 tools/stamp_assets.py --check
+```
+
+If a page ever *does* look wrong after a deploy, check this first: a hard reload
+(`Cmd`/`Ctrl` + `Shift` + `R`) proving it fine means the stamps are stale, not the
+code.
+
+---
+
 ## Publish it
 
 One-time setup, after the repo exists on GitHub:
