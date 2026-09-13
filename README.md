@@ -5,11 +5,16 @@ Personal profile site for Jin Zeng — Manager, Data Science & AI Consulting.
 **Live:** <https://jjjzeng.github.io>
 
 Static HTML, CSS and vanilla JavaScript. No build step, no dependencies, no
-framework, no trackers, no third-party requests. GitHub Pages serves the repo
-root as-is.
+framework, no analytics, no trackers, no cookies. Nothing is loaded from a third
+party; the only outbound request in the whole site is the contact form posting to
+Web3Forms, and only when a visitor presses send. GitHub Pages serves the repo root
+as-is.
 
 Reads in **English, 简体中文 or Français**, in a light or dark theme, and prints
 cleanly as a résumé.
+
+> The contact form is wired to a Web3Forms access key held in `index.html`.
+> See [Contact form](#contact-form) if you ever need to rotate it.
 
 ---
 
@@ -32,7 +37,7 @@ Every later `git push` to `main` republishes automatically.
 | --- | --- |
 | The résumé PDF | Contains a phone number, email address and home address. `.gitignore` blocks `*.pdf`, `*Resume*` and friends. |
 | Original photos | Carry EXIF **GPS coordinates**, several of them recorded at home. Only processed, metadata-stripped copies are committed. |
-| Email address, phone number, street address | The site's only contact channel is LinkedIn, by design. |
+| Email address, phone number, street address | Never in the markup. Contact goes through LinkedIn or the relay form, whose destination lives server-side at Web3Forms. |
 | Client names | Every engagement is described by industry and outcome. Named platforms are either the employer's own products or public cloud services. |
 
 Originals live one directory *up* from this repo (`../photo`, `../Resume*.pdf`),
@@ -86,6 +91,50 @@ only appear once more than one album has content.
 > changing one and not the other leaves them disagreeing. Change
 > `tools/photos.json` and rebuild — that keeps both in step and the translation
 > keys findable.
+
+---
+
+## Contact form
+
+The **Send a message** form in the closing section posts to
+[Web3Forms](https://web3forms.com), which relays to an inbox. The destination
+address is held server-side against the access key, so **the email address never
+appears in this repo or in the page source** — which is the whole reason for
+using a relay instead of a `mailto:` link.
+
+### The access key
+
+It lives in one place — the hidden input in `index.html`:
+
+```html
+<input type="hidden" name="access_key" value="…">
+```
+
+**This key is public by design.** Web3Forms' own documentation says so, and it has
+to be: a form on a static site has no server to hide anything behind, so the key
+must reach the visitor's browser to work at all. It only names the destination
+inbox — it cannot read past submissions, change settings, or reach the account.
+Anyone can read it with View Source, which is expected and harmless.
+
+The one thing it *can* attract is spam aimed at your inbox, which is what the
+honeypot and Web3Forms' server-side filtering are for. To rotate it, get a new key
+at <https://web3forms.com> and replace that one value.
+
+If the value is ever missing or still reads `YOUR_…`, the form validates normally
+but refuses to submit, saying *"This form is not connected yet"* rather than
+pretending to send. A `console.warn` fires on load too.
+
+### How it behaves
+
+| | |
+| --- | --- |
+| **With JavaScript** | Validates in place, posts via `fetch`, answers in the same spot. Never navigates away. |
+| **Without JavaScript** | A plain HTML POST. The browser's own `required` handling applies, and the hidden `redirect` field lands the visitor on `thanks.html`. |
+| **Spam** | A `botcheck` honeypot (`display:none`, `aria-hidden`, `tabindex="-1"` — invisible to people and assistive tech alike) plus Web3Forms' own server-side filtering. If spam ever gets through, their free hCaptcha is a drop-in, at the cost of one third-party script. |
+| **Validation** | Errors appear per field with an icon *and* wording, never colour alone; `aria-invalid` and `aria-describedby` are wired up; focus moves to the first bad field; a `role="status"` region announces the outcome. |
+
+`redirect` is stripped from the `fetch` payload — it exists only for the no-JS
+path. If you rename or move `thanks.html`, update that field to match.
 
 ---
 
@@ -207,15 +256,48 @@ Everything lives in `index.html` — there is no CMS and no data file to chase.
 Change any English string and its translations go stale silently, so run
 `python3 tools/i18n_extract.py --missing` afterwards.
 
-### Keeping the chart honest
+### The timeline is generated
 
-Each bar is positioned with two inline custom properties:
+`index.html`'s chart block is built from
+[`tools/timeline.json`](tools/timeline.json) — do not hand-edit it:
+
+```bash
+python3 tools/build_timeline.py            # rewrite the block
+python3 tools/build_timeline.py --check    # print the maths, write nothing
+```
+
+Give it real dates and it computes every position, the axis ticks, the gridline
+pitch and the "N continuous years" figure in the caption. Adding an engagement is
+three lines of JSON and a re-run.
+
+The chart has two bands, and the split is the point of it:
+
+- **Where** — a continuous `Employment` band. Seventeen short engagement bars on
+  their own read as seventeen short *jobs*; this band carries the fact that all of
+  them happened inside one unbroken IBM post. An arrow head marks it as ongoing.
+  The UofT master's sits on the same axis because it genuinely overlaps, which
+  shows it was done alongside full-time work. Degrees that predate the axis are
+  named in a line underneath rather than squeezing the scale back to 2012.
+- **What** — the engagement bars, unchanged.
+
+`--check` warns about any bar under 1.5% of the axis width, since those get hard
+to tap. If that fires, shorten the axis rather than shrinking the bars.
+
+Each engagement `label` doubles as its screen-reader sentence **and** as an i18n
+key, so rewording one means adding an entry in `assets/js/i18n.js`. Run
+`python3 tools/i18n_extract.py --missing` after editing.
+
+<details>
+<summary>The underlying maths, if you ever need to place a bar by hand</summary>
+
+Each bar carries two inline custom properties:
 
 ```html
 <a class="bar bar--genai" style="--x:75%;--w:6.25%" href="#p-concierge" data-i="12">
 ```
 
-The axis spans **2019.00 → 2027.00**, so for a date `year + (month-1)/12`:
+The axis spans `axis.from → axis.to` from the spec, so for a date
+`year + (month-1)/12`:
 
 ```
 --x = (start - 2019) / 8 × 100%
@@ -252,6 +334,13 @@ Built to WCAG 2.2 AA and worth keeping that way:
 - Reflows to 320 px with no horizontal scroll; the chart alone scrolls
   sideways, which WCAG 1.4.10 permits for data visualisations.
 - Prints cleanly — navigation, chart and gallery drop out, disclosures open.
+- The contact form labels every field, wires `aria-describedby` to its hint and
+  error, sets `aria-invalid`, moves focus to the first bad field, and reports the
+  outcome through a `role="status"` region. Errors carry an icon and wording as
+  well as colour (SC 1.4.1), and native validation stays available with JavaScript
+  off because `novalidate` is applied by script, not in the markup.
+- Timeline bands are `<li>`s with a visually-hidden sentence each, so the spine
+  reads as a list of dated facts rather than decoration.
 - `<html lang>` tracks the chosen language, and the Chinese, Spanish and French
   fragments inside a page carry their own `lang` (SC 3.1.1 and 3.1.2).
 - The dark closing band derives its greys with `color-mix()` from its own

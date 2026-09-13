@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Message sent — Jin Zeng</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css">
+<style>
+  /* Only reached when JavaScript is off — with it on, the form answers in place
+     and never navigates away. */
+  .sent { min-height: 78vh; display: grid; place-content: center; text-align: left; }
+  .sent h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 6vw, 3.6rem);
+             letter-spacing: -.03em; margin-bottom: .8rem; }
+  .sent p { max-width: 44ch; color: var(--slate); margin-bottom: 1.8rem; }
+  .sent__tick {
+    width: 3rem; height: 3rem; border-radius: 50%; margin-bottom: 1.4rem;
+    display: grid; place-items: center;
+    background: var(--signal-wash); box-shadow: inset 0 0 0 1.5px var(--signal);
+  }
+  .sent__tick svg { stroke: var(--signal); }
+</style>
+</head>
+<body>
+<main class="wrap sent">
+  <p class="sent__tick" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke-width="2.5"
+         stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.2 5.2L20 7"/></svg>
+  </p>
+  <p class="eyebrow">Message sent</p>
+  <h1>Thanks — it's on its way</h1>
+  <p>Your message has reached my inbox. I'll reply to the address you gave, usually within a few days.</p>
+  <p><a class="btn btn--primary" href="/">Back to the profile</a></p>
+</main>
+<script>
+  (function () {
+    try {
+      var s = localStorage.getItem('jz-theme');
+      var d = s ? s === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', d ? 'dark' : 'light');
+    } catch (e) {}
+  }());
+</script>
+</body>
+</html>

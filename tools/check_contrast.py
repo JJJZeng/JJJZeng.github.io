@@ -13,6 +13,8 @@ from __future__ import annotations
 import sys
 
 LIGHT = {
+    "err-on-invert": "#FFB4A8",
+    "ok-on-invert": "#8FE3B0",
     "paper": "#F7FAFD", "card": "#FFFFFF", "tint": "#EDF4FC",
     "ink": "#0C1F38", "slate": "#4A6280",
     "signal": "#0B4FD1", "signal-hi": "#08379A", "signal-wash": "#E4EEFC",
@@ -23,6 +25,8 @@ LIGHT = {
 }
 
 DARK = {
+    "err-on-invert": "#A3231A",
+    "ok-on-invert": "#0F6B3C",
     "paper": "#08131F", "card": "#0E2033", "tint": "#0B1A2A",
     "ink": "#E7F0FA", "slate": "#A6BFD9",
     "signal": "#86B6F2", "signal-hi": "#B0D0F8", "signal-wash": "#14304F",
@@ -63,6 +67,13 @@ PAIRS_LIGHT = [
     ("on-invert-dim", "ink", 4.5, "connect band eyebrow"),
     ("ink", "paper", 4.5, "connect band button label"),
     ("on-invert-edge", "ink", 3.0, "connect band ghost button edge"),
+    ("signal", "paper", 3.0, "tenure band border"),
+    ("slate", "paper", 3.0, "study band border"),
+    ("err-on-invert", "ink", 4.5, "form error text on band"),
+    ("ok-on-invert", "ink", 4.5, "form success text on band"),
+    ("paper", "field-bg", 4.5, "form input text"),
+    ("on-invert-dim", "field-bg", 4.5, "form input placeholder"),
+    ("on-invert-edge", "ink", 3.0, "form input border vs band"),
     ("rule-firm", "tint", 3.0, "chip border on band"),
 ]
 
@@ -94,6 +105,13 @@ PAIRS_DARK = [
     ("on-invert-dim", "ink", 4.5, "connect band eyebrow"),
     ("ink", "paper", 4.5, "connect band button label"),
     ("on-invert-edge", "ink", 3.0, "connect band ghost button edge"),
+    ("signal", "paper", 3.0, "tenure band border"),
+    ("slate", "paper", 3.0, "study band border"),
+    ("err-on-invert", "ink", 4.5, "form error text on band"),
+    ("ok-on-invert", "ink", 4.5, "form success text on band"),
+    ("paper", "field-bg", 4.5, "form input text"),
+    ("on-invert-dim", "field-bg", 4.5, "form input placeholder"),
+    ("on-invert-edge", "ink", 3.0, "form input border vs band"),
     ("rule-firm", "tint", 3.0, "border vs band"),
 ]
 
@@ -111,6 +129,7 @@ def mix(a: str, b: str, pct: float) -> str:
 def add_invert_tokens(tok: dict) -> dict:
     """The connect band paints --paper on --ink, so its greys are mixes of the two."""
     tok = dict(tok)
+    tok["field-bg"] = mix(tok["paper"], tok["ink"], 0.10)
     tok["on-invert-soft"] = mix(tok["paper"], tok["ink"], 0.84)
     tok["on-invert-dim"] = mix(tok["paper"], tok["ink"], 0.70)
     tok["on-invert-edge"] = mix(tok["paper"], tok["ink"], 0.50)

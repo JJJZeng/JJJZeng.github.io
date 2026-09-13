@@ -296,7 +296,7 @@ cite { font-style: italic; }
 
 .chart__scroll { overflow-x: auto; padding-bottom: .35rem; }
 .chart__scroll:focus-visible { outline: 2.5px solid var(--signal); outline-offset: 4px; border-radius: 6px; }
-.chart__plot { position: relative; min-width: 30rem; padding-top: 1.5rem; }
+.chart__plot { position: relative; min-width: 34rem; padding-top: 1.5rem; }
 
 .chart__axis { position: absolute; inset: 0 0 auto 0; height: 1.5rem; }
 .chart__axis span {
@@ -305,11 +305,63 @@ cite { font-style: italic; }
   transform: translateX(-1px);
 }
 
+/* ---------- tenure spine ----------
+   Seventeen short engagement bars, on their own, read as seventeen short jobs.
+   This band sits above them and carries the fact they were all one continuous
+   post. It is deliberately a different register from the engagement bars: taller,
+   squarer, quieter fill, with the label inside — context, not another data point. */
+.chart__grouphead {
+  margin: 0 0 .35rem;
+  font: 500 .6rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .15em;
+  color: var(--slate);
+}
+.spine {
+  position: relative; list-style: none; margin: 0 0 1.4rem; padding: .35rem 0 0;
+  background-image: repeating-linear-gradient(to right, var(--rule) 0 1px, transparent 1px var(--tick, 12.5%));
+}
+.spine__row { position: relative; height: 44px; }
+
+.tenure {
+  position: absolute; left: var(--x); top: 20px;
+  width: var(--w); min-width: 24px; height: 22px;
+  border-radius: 5px;
+}
+.tenure--job {
+  background: color-mix(in srgb, var(--signal) 16%, var(--card));
+  box-shadow: inset 0 0 0 1.5px var(--signal);
+}
+.tenure--study {
+  background: var(--tint);
+  background-image: repeating-linear-gradient(115deg,
+    color-mix(in srgb, var(--slate) 45%, transparent) 0 1px, transparent 1px 7px);
+  box-shadow: inset 0 0 0 1.5px var(--slate);
+}
+/* An open right edge says "still going" without needing a legend entry. */
+.tenure--current::after {
+  content: ""; position: absolute; left: 100%; top: 50%; margin-left: 3px;
+  width: 0; height: 0; transform: translateY(-50%);
+  border-left: 7px solid var(--signal);
+  border-top: 5.5px solid transparent; border-bottom: 5.5px solid transparent;
+}
+/* Above the band, aligned to its start, free to overrun to the right. */
+.tenure__label {
+  position: absolute; bottom: calc(100% + 5px); left: 0;
+  white-space: nowrap;
+  font: 600 .67rem/1 var(--font-mono); letter-spacing: .04em;
+}
+.tenure--job .tenure__label { color: var(--signal-hi); }
+.tenure--study .tenure__label { color: var(--slate); }
+
+.chart__earlier {
+  margin: .1rem 0 0; padding-top: .8rem; border-top: 1px dashed var(--rule);
+  font-size: .78rem; line-height: 1.5; color: var(--slate);
+}
+
 .chart__rows {
   position: relative;
   display: flex; flex-direction: column;
   padding-top: .35rem;
-  background-image: repeating-linear-gradient(to right, var(--rule) 0 1px, transparent 1px 12.5%);
+  background-image: repeating-linear-gradient(to right, var(--rule) 0 1px, transparent 1px var(--tick, 12.5%));
   background-position: left top;
 }
 /* 24px row pitch with a 14px bar centred in it: the invisible hit areas below
@@ -408,6 +460,15 @@ cite { font-style: italic; }
   --on-invert-rule: color-mix(in srgb, var(--paper) 26%, var(--ink));
   --on-invert-edge: color-mix(in srgb, var(--paper) 50%, var(--ink));
   --on-invert-hover: color-mix(in srgb, var(--paper) 12%, var(--ink));
+  /* Feedback colours have to sit on the band, which flips with the theme, so
+     they are declared per theme below rather than mixed from --ink. */
+  --err-on-invert: #FFB4A8;
+  --ok-on-invert:  #8FE3B0;
+  --field-bg: color-mix(in srgb, var(--paper) 10%, var(--ink));
+}
+[data-theme="dark"] .band--invert {
+  --err-on-invert: #A3231A;
+  --ok-on-invert:  #0F6B3C;
 }
 .band--invert .eyebrow { color: var(--on-invert-dim); }
 
@@ -667,6 +728,110 @@ cite { font-style: italic; }
 }
 .connect__lede { max-width: 52ch; color: var(--on-invert-soft); font-size: 1.06rem; margin-bottom: 2.2rem; }
 .connect__links { display: flex; flex-wrap: wrap; gap: .8rem; }
+
+/* ---------- contact form ----------
+   Sits on the inverted band, so every colour comes from the band's own tokens:
+   --paper/--ink are already swapped there, which makes the inputs a light card
+   in light mode and a dark card in dark mode without a second set of rules. */
+/* ---------- "more elsewhere" link ---------- */
+.more { margin: .9rem 0 0; }
+.more__link {
+  display: inline-flex; align-items: center; gap: .4rem;
+  min-height: 1.9rem;
+  font: 500 .84rem/1 var(--font-body); color: var(--signal);
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--signal) 45%, transparent);
+}
+.more__link:hover { text-decoration-color: currentColor; }
+.more__out { flex: none; opacity: .8; }
+
+.connect__grid {
+  display: grid; gap: clamp(2rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+@media (min-width: 60rem) {
+  /* ---------- "more elsewhere" link ---------- */
+.more { margin: .9rem 0 0; }
+.more__link {
+  display: inline-flex; align-items: center; gap: .4rem;
+  min-height: 1.9rem;
+  font: 500 .84rem/1 var(--font-body); color: var(--signal);
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--signal) 45%, transparent);
+}
+.more__link:hover { text-decoration-color: currentColor; }
+.more__out { flex: none; opacity: .8; }
+
+.connect__grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); }
+}
+.connect__intro { max-width: 46ch; }
+
+.cform {
+  background: color-mix(in srgb, var(--paper) 8%, transparent);
+  border: 1px solid var(--on-invert-edge);
+  border-radius: var(--r);
+  padding: clamp(1.4rem, 3vw, 2rem);
+}
+.cform__h {
+  font-family: var(--font-display); font-size: 1.32rem; letter-spacing: -.01em;
+  margin: 0 0 1.3rem; color: var(--paper);
+}
+/* Honeypot. display:none keeps it out of the tab order and off the a11y tree,
+   so a real visitor can never trip it. */
+.cform__pot { display: none; }
+
+.field { margin-bottom: 1.15rem; }
+.field label {
+  display: block; margin-bottom: .4rem;
+  font: 500 .72rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: .1em;
+  color: var(--on-invert-dim);
+}
+.field input, .field textarea {
+  width: 100%; box-sizing: border-box;
+  padding: .7rem .8rem; min-height: 2.75rem;
+  background: color-mix(in srgb, var(--paper) 10%, var(--ink));
+  color: var(--paper);
+  border: 1.5px solid var(--on-invert-edge); border-radius: 7px;
+  font: 400 1rem/1.5 var(--font-body);
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+.field textarea { resize: vertical; min-height: 7rem; }
+.field input::placeholder, .field textarea::placeholder { color: var(--on-invert-dim); }
+.field input:focus-visible, .field textarea:focus-visible {
+  outline: none; border-color: var(--paper);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--paper) 45%, transparent);
+}
+.field__hint {
+  margin: .35rem 0 0; font-size: .78rem; line-height: 1.4; color: var(--on-invert-dim);
+}
+/* Errors carry an icon and wording as well as colour, never colour alone. */
+.field__err {
+  margin: .4rem 0 0; padding-left: 1.15rem; position: relative;
+  font-size: .82rem; line-height: 1.4; font-weight: 500; color: var(--err-on-invert);
+}
+.field__err::before {
+  content: "!"; position: absolute; left: 0; top: .05em;
+  display: grid; place-items: center; width: .9rem; height: .9rem; border-radius: 50%;
+  font: 700 .62rem/1 var(--font-body);
+  background: var(--err-on-invert); color: var(--ink);
+}
+.field [aria-invalid="true"] {
+  border-color: var(--err-on-invert);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--err-on-invert) 28%, transparent);
+}
+
+.cform__send { margin-top: .3rem; width: 100%; justify-content: center; }
+.cform[aria-busy="true"] .cform__send { opacity: .72; cursor: progress; }
+
+.cform__status { margin: 1rem 0 0; font-size: .9rem; line-height: 1.5; font-weight: 500; }
+.cform__status:empty { margin: 0; }
+.cform__status[data-state="ok"] { color: var(--ok-on-invert); }
+.cform__status[data-state="bad"] { color: var(--err-on-invert); }
+.cform__fine {
+  margin: 1rem 0 0; padding-top: .9rem; border-top: 1px solid var(--on-invert-rule);
+  font-size: .76rem; line-height: 1.5; color: var(--on-invert-dim);
+}
 
 .band--invert .btn--primary {
   background: var(--paper); color: var(--ink); box-shadow: none;

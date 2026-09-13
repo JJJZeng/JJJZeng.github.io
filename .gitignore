@@ -68,3 +68,8 @@ _preview_tmp/
 _rev/
 tmp/
 *.log
+
+# Local environment files, should any ever be added. The Web3Forms key is not
+# one of these — it is public by design and lives in index.html.
+.env
+.env.*

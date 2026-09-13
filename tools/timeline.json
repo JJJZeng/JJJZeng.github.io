@@ -1,0 +1,177 @@
+{
+  "_comment": [
+    "Source of truth for the hero timeline. Run:  python3 tools/build_timeline.py",
+    "It computes every bar position from these dates and rewrites the block in",
+    "index.html between <!-- chart:start --> and <!-- chart:end -->.",
+    "",
+    "Dates are inclusive [start, end]. 'present' means the axis end.",
+    "The 'label' of each engagement is a screen-reader sentence and is also an",
+    "i18n key — changing one means adding a new entry in assets/js/i18n.js.",
+    "Check with: python3 tools/i18n_extract.py --missing"
+  ],
+  "axis": {
+    "from": "2018-01",
+    "to": "2027-01",
+    "tickEvery": 12
+  },
+  "present": "2026-09",
+  "earlier": "Before the axis: MSc Statistics, McMaster 2016–17 · BEng Computer Science, Wuhan University 2014–16 · BEcon Mathematical Finance, Wuhan University of Technology 2012–16",
+  "spine": [
+    {
+      "row": "Employment",
+      "bars": [
+        {
+          "kind": "job",
+          "from": "2018-06",
+          "to": "2019-01",
+          "label": "Citi",
+          "sr": "Citi, June 2018 to January 2019, eight months."
+        },
+        {
+          "kind": "job",
+          "current": true,
+          "from": "2019-02",
+          "to": "present",
+          "label": "IBM",
+          "labelLong": "IBM · Data Scientist → Senior → Manager",
+          "sr": "IBM, February 2019 to present, continuous."
+        }
+      ]
+    },
+    {
+      "row": "Study",
+      "bars": [
+        {
+          "kind": "study",
+          "from": "2021-09",
+          "to": "2023-06",
+          "label": "University of Toronto · MA Economics",
+          "labelShort": "UofT · MA Economics",
+          "sr": "University of Toronto, Master of Arts in Economics, September 2021 to June 2023, studied alongside full-time work."
+        }
+      ]
+    }
+  ],
+  "engagements": [
+    {
+      "href": "#p-equities",
+      "family": "ml",
+      "from": "2019-03",
+      "to": "2022-07",
+      "label": "Revenue forecasting for US and European equities, investment management, March 2019 to July 2022. Machine learning."
+    },
+    {
+      "href": "#p-weather",
+      "family": "ml",
+      "from": "2019-10",
+      "to": "2019-11",
+      "label": "Weather impact on macroeconomic indicators, banking, October to November 2019. Machine learning."
+    },
+    {
+      "href": "#p-alpha",
+      "family": "ml",
+      "from": "2019-12",
+      "to": "2020-01",
+      "label": "News-driven alpha forecasting dashboard, banking, December 2019 to January 2020. Machine learning."
+    },
+    {
+      "href": "#p-insurance",
+      "family": "ml",
+      "from": "2021-03",
+      "to": "2021-04",
+      "label": "Insurance data quality validation, pension and insurance, March to April 2021. Data engineering."
+    },
+    {
+      "href": "#p-parts",
+      "family": "ml",
+      "from": "2022-03",
+      "to": "2022-08",
+      "label": "Parts demand forecasting enhancement, aerospace manufacturing, March to August 2022. Machine learning."
+    },
+    {
+      "href": "#p-segments",
+      "family": "ml",
+      "from": "2023-04",
+      "to": "2023-05",
+      "label": "Customer classification models, postal and logistics, April to May 2023. Machine learning."
+    },
+    {
+      "href": "#p-rfp",
+      "family": "genai",
+      "from": "2023-07",
+      "to": "2023-12",
+      "label": "Generative AI proposal advisor, professional services, July to December 2023. Generative AI."
+    },
+    {
+      "href": "#p-revenue-id",
+      "family": "both",
+      "from": "2024-02",
+      "to": "2024-05",
+      "label": "Revenue identification model with generative AI reporting, postal and logistics, February to May 2024. Machine learning and generative AI."
+    },
+    {
+      "href": "#p-rag-fix",
+      "family": "genai",
+      "from": "2024-05",
+      "to": "2024-06",
+      "label": "Enterprise retrieval platform remediation, public sector, May to June 2024. Generative AI."
+    },
+    {
+      "href": "#p-multimodel",
+      "family": "genai",
+      "from": "2024-07",
+      "to": "2024-08",
+      "label": "Secure multi-model conversational AI platform, public sector, July to August 2024. Generative AI."
+    },
+    {
+      "href": "#p-accelerators",
+      "family": "genai",
+      "from": "2024-08",
+      "to": "2024-12",
+      "label": "Generative AI assets and accelerators programme, public sector, August to December 2024. Generative AI."
+    },
+    {
+      "href": "#p-concierge",
+      "family": "genai",
+      "from": "2025-01",
+      "to": "2025-06",
+      "label": "Bilingual HR and pay concierge assistant, public sector, January to June 2025. Generative AI."
+    },
+    {
+      "href": "#p-voice",
+      "family": "genai",
+      "from": "2025-06",
+      "to": "2025-12",
+      "label": "Generative AI voice assistant, healthcare, June to December 2025. Generative AI."
+    },
+    {
+      "href": "#p-erp",
+      "family": "genai",
+      "from": "2026-01",
+      "to": "2026-03",
+      "label": "ERP configuration agents, telecommunications, January to March 2026. Generative AI."
+    },
+    {
+      "href": "#p-nominations",
+      "family": "both",
+      "from": "2026-03",
+      "to": "2026-05",
+      "label": "AI-assisted volume nomination workflow, energy, March to May 2026. Machine learning and generative AI."
+    },
+    {
+      "href": "#p-risk",
+      "family": "genai",
+      "from": "2026-05",
+      "to": "2026-07",
+      "label": "Governance risk assessment agent, public sector, May to July 2026. Generative AI."
+    },
+    {
+      "href": "#p-itp",
+      "family": "genai",
+      "from": "2026-06",
+      "to": "present",
+      "live": true,
+      "label": "Agentic work package drafting assistant, construction and infrastructure, June 2026 to present. Generative AI. Current engagement."
+    }
+  ]
+}

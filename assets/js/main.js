@@ -127,7 +127,7 @@
     });
 
     paint(root.getAttribute('data-theme') ||
-          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
 
     btn.addEventListener('click', function () {
       var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
@@ -284,7 +284,7 @@
         count.textContent = album === 'all'
           ? t('Showing all {n} photos.', { n: total })
           : t('Showing {n} of {total} photos in {album}.',
-              { n: shown, total: total, album: chip.textContent.trim() });
+            { n: shown, total: total, album: chip.textContent.trim() });
       }
       shownAlbum = album;
     });
@@ -398,6 +398,136 @@
   (function year() {
     var el = $('[data-year]');
     if (el) el.textContent = String(new Date().getFullYear());
+  }());
+
+  /* ----------------------------------------------------------- contact form
+     The form is a working plain HTML POST on its own: action, method and the
+     `redirect` field carry a no-JavaScript visitor to thanks.html. This module
+     upgrades it to submit in place with its own validation messages.
+
+     Native validation stays on until this runs, so a no-JS visitor still gets
+     the browser's required-field handling; novalidate is set here, not in the
+     markup. */
+  (function contactForm() {
+    var form = $('[data-web3forms]');
+    if (!form) return;
+
+    var status = $('[data-cform-status]', form);
+    var send = $('.cform__send', form);
+    var keyField = form.elements.access_key;
+    var configured = keyField && !/^YOUR_|^$/.test(keyField.value.trim());
+
+    form.setAttribute('novalidate', '');
+
+    if (!configured) {
+      // Better a clear console line than a form that silently swallows messages.
+      console.warn('[contact form] access_key is still the placeholder. ' +
+        'Get a free key at https://web3forms.com and replace ' +
+        'YOUR_WEB3FORMS_ACCESS_KEY in index.html.');
+    }
+
+    var fields = $$('.field input, .field textarea', form).filter(function (el) {
+      return el.type !== 'hidden' && el.type !== 'checkbox';
+    });
+
+    function errBox(el) { return document.getElementById(el.id + '-err'); }
+
+    function problem(el) {
+      var v = el.value.trim();
+      if (!v) {
+        return el.tagName === 'TEXTAREA'
+          ? t('Please write a message.')
+          : t('Please fill this in.');
+      }
+      // Deliberately loose: something@something.tld. Anything stricter rejects
+      // addresses that are perfectly valid.
+      if (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) {
+        return t('That does not look like an email address.');
+      }
+      return null;
+    }
+
+    function mark(el, message) {
+      var box = errBox(el);
+      el.setAttribute('aria-invalid', message ? 'true' : 'false');
+      if (!box) return;
+      box.textContent = message || '';
+      box.hidden = !message;
+    }
+
+    function setStatus(message, state) {
+      if (!status) return;
+      status.textContent = message || '';
+      if (state) status.setAttribute('data-state', state);
+      else status.removeAttribute('data-state');
+    }
+
+    // Clear a field's error as soon as it is fixed, rather than making the
+    // visitor submit again to find out.
+    fields.forEach(function (el) {
+      el.addEventListener('input', function () {
+        if (el.getAttribute('aria-invalid') === 'true' && !problem(el)) mark(el, null);
+      });
+      el.addEventListener('blur', function () {
+        if (el.value.trim()) mark(el, problem(el));
+      });
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var bad = [];
+      fields.forEach(function (el) {
+        var msg = problem(el);
+        mark(el, msg);
+        if (msg) bad.push(el);
+      });
+
+      if (bad.length) {
+        setStatus(bad.length === 1
+          ? t('One field needs attention.')
+          : t('{n} fields need attention.', { n: bad.length }), 'bad');
+        bad[0].focus();
+        return;
+      }
+
+      if (!configured) {
+        setStatus(t('This form is not connected yet. Please use LinkedIn for now.'), 'bad');
+        return;
+      }
+
+      form.setAttribute('aria-busy', 'true');
+      if (send) { send.disabled = true; send.textContent = t('Sending…'); }
+      setStatus(t('Sending…'), null);
+
+      var payload = {};
+      new FormData(form).forEach(function (v, k) {
+        if (k !== 'redirect') payload[k] = v;   // redirect is for the no-JS path only
+      });
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(function (res) {
+        return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+      }).then(function (r) {
+        if (!r.ok) throw new Error((r.data && r.data.message) || 'rejected');
+        form.reset();
+        fields.forEach(function (el) { mark(el, null); });
+        setStatus(t('Thanks — your message is on its way. I will reply to the address you gave.'), 'ok');
+        if (status) {
+          // Move focus to the confirmation so it is not missed on a long page.
+          status.setAttribute('tabindex', '-1');
+          status.focus();
+        }
+      }).catch(function () {
+        setStatus(t('That did not send. Please try again, or reach me on LinkedIn.'), 'bad');
+      }).then(function () {
+        form.removeAttribute('aria-busy');
+        if (send) { send.disabled = false; send.textContent = t('Send message'); }
+      });
+    });
   }());
 
 }());
